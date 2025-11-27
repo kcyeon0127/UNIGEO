@@ -202,6 +202,11 @@ def train(
     lr: float = 1e-4,
     lambda_align: float = 1.0,
     lambda_ortho: float = 1e-3,
+    lambda_region: float = 0.0,
+    pooling_mode: str = "mean",
+    max_text_regions: int = 32,
+    max_image_regions: int = 32,
+    max_layout_regions: int = 128,
     device: str = "cuda",
     save_path: Optional[Path] = None,
     model_cls: Callable[..., ManifoldAlignModel] = ManifoldAlignModel,
@@ -303,8 +308,8 @@ def train(
 
     if val_embeddings:
         val_dataset = EmbeddingDataset(
-        val_embeddings,
-        val_labels,
+            val_embeddings,
+            val_labels,
             hidden_dim=hidden_dim,
             pooling_mode=pooling_mode,
             max_text_regions=max_text_regions,
