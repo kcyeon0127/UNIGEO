@@ -172,7 +172,9 @@ def extract_embeddings_from_pdfs(
                     if collated is not None:
                         all_embeddings.append(collated)
         except Exception as e:
+            import traceback
             print(f"Error processing {pdf_path}: {e}")
+            traceback.print_exc()
             continue
 
     return all_embeddings
