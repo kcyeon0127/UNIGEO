@@ -26,7 +26,6 @@ def main():
     parser.add_argument("--epochs", type=int, default=10, help="Epochs")
     parser.add_argument("--lr", type=float, default=1e-4, help="Learning rate")
     parser.add_argument("--device", type=str, default="cuda", help="Device")
-    parser.add_argument("--use_lite", action="store_true", help="Use lite encoders")
     parser.add_argument("--save_path", type=str, default="non_ortho_baseline.pt", help="Checkpoint path")
     parser.add_argument("--num_labels", type=int, default=None, help="Number of labels")
     parser.add_argument("--hidden_dim", type=int, default=3584, help="Anchor embedding size")
@@ -48,7 +47,6 @@ def main():
         lambda_align=1.0,
         lambda_ortho=0.0,
         device=args.device,
-        use_lite=args.use_lite,
         save_path=Path(args.save_path) if args.save_path else None,
         model_cls=ManifoldAlignModel,
         model_kwargs={"projector_cls": LinearProjector},
@@ -57,4 +55,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

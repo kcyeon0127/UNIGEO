@@ -121,7 +121,7 @@ from unidoc.detection import DetectionPipeline
 
 # 파이프라인 초기화
 pipeline = DetectionPipeline(
-    use_lite=True,              # 테스트용 (Qwen2-VL 없이)
+    # use_lite 플래그 제거 - 항상 정식 Qwen encoder 사용
     ocr_languages=['en'],       # OCR 언어
     detection_confidence=0.3    # detection threshold
 )
@@ -303,7 +303,7 @@ print(batch["image_mask"])      # (num_regions,) bool
 ```python
 from unidoc.detection import DetectionPipeline
 
-pipeline = DetectionPipeline(use_lite=True)
+pipeline = DetectionPipeline()
 embeddings = pipeline.process_pdf("any_document.pdf")
 ```
 
@@ -322,7 +322,7 @@ doc = parser.parse("digital_document.pdf")
 detector = RegionDetector()
 regions = detector.detect(doc.pages[0])
 
-tokenizer = RegionTokenizer(use_lite=True)
+tokenizer = RegionTokenizer()
 embeddings = tokenizer.tokenize(regions, page_image, ...)
 ```
 

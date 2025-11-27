@@ -329,6 +329,9 @@ class TextEmbeddingLite(nn.Module):
 
     def encode(self, text: str) -> torch.Tensor:
         """간단한 character-level encoding"""
+        if text is None:
+            text = ""
+
         # Character to ID
         ids = []
         for char in text[:self.max_length]:

@@ -69,7 +69,6 @@ class RegionTokenizer(nn.Module):
         hidden_size: int = 3584,
         text_mode: str = "token_only",
         visual_pooling: str = "mean",
-        use_lite: bool = False,
         device: Optional[str] = None,
         load_model: bool = True
     ):
@@ -87,8 +86,6 @@ class RegionTokenizer(nn.Module):
 
         self.model_name = model_name
         self.hidden_size = hidden_size
-        self.use_lite = use_lite
-
         # Device
         if device is None:
             self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -96,22 +93,17 @@ class RegionTokenizer(nn.Module):
             self.device = torch.device(device)
 
         # 세 encoder 초기화
-        if use_lite:
-            # 테스트용 경량 버전
-            self.text_encoder = TextEmbeddingLite(hidden_size=hidden_size)
-            self.visual_encoder = VisualEmbeddingLite(hidden_size=hidden_size)
-        else:
-            # Qwen2-VL 기반
-            self.text_encoder = TextEmbedding(
-                model_name=model_name,
-                mode=text_mode,
-                load_model=load_model
-            )
-            self.visual_encoder = VisualEmbedding(
-                model_name=model_name,
-                pooling=visual_pooling,
-                load_model=load_model
-            )
+        # Qwen2-VL 기반
+        self.text_encoder = TextEmbedding(
+            model_name=model_name,
+            mode=text_mode,
+            load_model=load_model
+        )
+        self.visual_encoder = VisualEmbedding(
+            model_name=model_name,
+            pooling=visual_pooling,
+            load_model=load_model
+        )
 
         # Layout encoder (항상 사용)
         self.layout_encoder = LayoutEmbedding(hidden_size=hidden_size)

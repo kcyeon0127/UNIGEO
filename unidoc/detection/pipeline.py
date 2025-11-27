@@ -66,7 +66,6 @@ class DetectionPipeline:
         hidden_size: int = 3584,
         ocr_languages: List[str] = ['en'],
         detection_confidence: float = 0.3,
-        use_lite: bool = False,
         device: Optional[str] = None,
         load_model: bool = True
     ):
@@ -81,8 +80,6 @@ class DetectionPipeline:
             load_model: 모델 로드 여부
         """
         self.hidden_size = hidden_size
-        self.use_lite = use_lite
-
         # Device
         if device is None:
             self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -104,18 +101,14 @@ class DetectionPipeline:
 
         # Encoders
         print("Initializing Encoders...")
-        if use_lite:
-            self.text_encoder = TextEmbeddingLite(hidden_size=hidden_size)
-            self.visual_encoder = VisualEmbeddingLite(hidden_size=hidden_size)
-        else:
-            self.text_encoder = TextEmbedding(
-                model_name=model_name,
-                load_model=load_model
-            )
-            self.visual_encoder = VisualEmbedding(
-                model_name=model_name,
-                load_model=load_model
-            )
+        self.text_encoder = TextEmbedding(
+            model_name=model_name,
+            load_model=load_model
+        )
+        self.visual_encoder = VisualEmbedding(
+            model_name=model_name,
+            load_model=load_model
+        )
 
         self.layout_encoder = LayoutEmbedding(hidden_size=hidden_size)
         self.layout_encoder.to(self.device)

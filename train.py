@@ -196,7 +196,6 @@ def train(
     lambda_align: float = 1.0,
     lambda_ortho: float = 1e-3,
     device: str = "cuda",
-    use_lite: bool = True,
     save_path: Optional[Path] = None,
     model_cls: Callable[..., ManifoldAlignModel] = ManifoldAlignModel,
     model_kwargs: Optional[Dict[str, Any]] = None
@@ -218,7 +217,6 @@ def train(
         lambda_align: alignment loss 가중치
         lambda_ortho: orthogonal regularization 가중치
         device: 디바이스
-        use_lite: 경량 encoder 사용 여부
         save_path: 모델 저장 경로
         model_cls: 학습에 사용할 모델 클래스
         model_kwargs: 모델 생성 시 추가 인자
@@ -240,7 +238,7 @@ def train(
         print(f"Loaded {len(train_embeddings)} cached training samples")
     elif train_pdf_paths:
         print("Initializing pipeline...")
-        pipeline = DetectionPipeline(use_lite=use_lite)
+        pipeline = DetectionPipeline()
         print(f"Extracting embeddings from {len(train_pdf_paths)} training PDFs...")
         train_embeddings = extract_embeddings_from_pdfs(train_pdf_paths, pipeline)
         print(f"Extracted {len(train_embeddings)} training samples")
@@ -254,7 +252,7 @@ def train(
         print(f"Loaded {len(val_embeddings)} cached validation samples")
     elif val_pdf_paths:
         if 'pipeline' not in locals():
-            pipeline = DetectionPipeline(use_lite=use_lite)
+            pipeline = DetectionPipeline()
         print(f"Extracting embeddings from {len(val_pdf_paths)} validation PDFs...")
         val_embeddings = extract_embeddings_from_pdfs(val_pdf_paths, pipeline)
         print(f"Extracted {len(val_embeddings)} validation samples")
@@ -489,7 +487,6 @@ if __name__ == "__main__":
     parser.add_argument("--epochs", type=int, default=10, help="Number of epochs")
     parser.add_argument("--lr", type=float, default=1e-4, help="Learning rate")
     parser.add_argument("--save_path", type=str, default="model.pt", help="Model save path")
-    parser.add_argument("--use_lite", action="store_true", help="Use lite encoders")
     parser.add_argument("--pooling_mode", type=str, default="mean", choices=["mean", "attention"], help="Pooling strategy for region embeddings")
     parser.add_argument("--max_text_regions", type=int, default=32, help="Max text regions per document")
     parser.add_argument("--max_image_regions", type=int, default=32, help="Max image regions per document")
@@ -522,7 +519,6 @@ if __name__ == "__main__":
         batch_size=args.batch_size,
         num_epochs=args.epochs,
         lr=args.lr,
-        use_lite=args.use_lite,
         save_path=Path(args.save_path),
         pooling_mode=args.pooling_mode,
         max_text_regions=args.max_text_regions,

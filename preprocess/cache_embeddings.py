@@ -68,7 +68,6 @@ def main():
     parser.add_argument("--output_dir", type=str, help="Directory to store split caches", default=None)
     parser.add_argument("--max_docs", type=int, help="Limit number of PDFs processed", default=None)
     parser.add_argument("--pages", type=str, help="Comma-separated list of page numbers (1-indexed)", default=None)
-    parser.add_argument("--use_lite", action="store_true", help="Use lite encoders in DetectionPipeline")
     parser.add_argument("--dpi", type=int, default=150, help="PDF rendering DPI")
 
     args = parser.parse_args()
@@ -95,7 +94,7 @@ def main():
 
     pages = [int(p) for p in args.pages.split(',')] if args.pages else None
 
-    pipeline = DetectionPipeline(use_lite=args.use_lite, detection_confidence=0.3)
+    pipeline = DetectionPipeline(detection_confidence=0.3)
 
     if args.split_file:
         output_dir = Path(args.output_dir)

@@ -119,6 +119,7 @@ class VisualEmbedding(nn.Module):
         # Process image
         inputs = self.processor(
             images=[image],
+            text=[""],
             return_tensors="pt",
             padding=True
         )
@@ -159,6 +160,7 @@ class VisualEmbedding(nn.Module):
         # Process images
         inputs = self.processor(
             images=images,
+            text=["" for _ in images],
             return_tensors="pt",
             padding=True
         )
