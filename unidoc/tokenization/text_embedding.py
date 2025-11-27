@@ -88,22 +88,43 @@ class TextEmbedding(nn.Module):
             trust_remote_code=True
         )
 
-        # 필요한 컴포넌트 추출
-        # Qwen2VL 구조: model.model.embed_tokens, model.model.layers, model.model.norm
-        self.embed_tokens = full_model.model.embed_tokens
+        # Qwen2-VL 버전에 따라 language model 서브모듈 위치가 다를 수 있음
+        language_model = getattr(full_model, "model", None)
+        if language_model is None:
+            language_model = getattr(full_model, "language_model", None)
+
+        if language_model is None:
+            raise RuntimeError("Unable to locate language model inside Qwen2-VL checkpoint")
+
+        # embed_tokens 위치 탐색
+        self.embed_tokens = getattr(language_model, "embed_tokens", None)
+        if self.embed_tokens is None and hasattr(language_model, "model"):
+            self.embed_tokens = getattr(language_model.model, "embed_tokens", None)
+
+        if self.embed_tokens is None:
+            raise RuntimeError("Qwen2-VL language model does not expose embed_tokens")
+
+        # Transformer layer/norm 모듈 탐색
+        transformer = language_model
+        if hasattr(language_model, "model") and hasattr(language_model.model, "layers"):
+            transformer = language_model.model
 
         if self.mode in ["shallow", "deep"]:
+            layers = getattr(transformer, "layers", None)
+            norm = getattr(transformer, "norm", None)
+
+            if layers is None:
+                raise RuntimeError("Unable to locate transformer layers for Qwen2-VL language model")
+
             if self.mode == "shallow":
-                # 처음 num_layers만 사용
                 self.layers = nn.ModuleList([
-                    full_model.model.layers[i]
-                    for i in range(min(self.num_layers, len(full_model.model.layers)))
+                    layers[i]
+                    for i in range(min(self.num_layers, len(layers)))
                 ])
             else:
-                # 전체 layers 사용
-                self.layers = full_model.model.layers
+                self.layers = layers
 
-            self.norm = full_model.model.norm
+            self.norm = norm
 
         # 메모리 절약을 위해 나머지 삭제
         del full_model
