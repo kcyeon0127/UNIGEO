@@ -12,6 +12,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from typing import Optional, Dict, Callable
+from tqdm import tqdm
 
 
 class OrthoLinear(nn.Module):
