@@ -6,8 +6,6 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 import torch
-from tqdm import tqdm
-
 from train import extract_embeddings_from_pdfs
 from unidoc.detection import DetectionPipeline
 
@@ -48,19 +46,13 @@ def _save_embeddings(
     if not pdf_paths:
         print(f"[WARN] No PDFs provided for {output_path}, skipping.")
         return
-    embeddings = []
-    for pdf_path in tqdm(pdf_paths, desc=f"Extracting {output_path.name}"):
-        page_embeddings = pipeline.process_pdf(pdf_path, pages=pages)
-        for page_emb in page_embeddings:
-            if page_emb:
-                collated = None
-                try:
-                    collated = collate_embeddings(page_emb)
-                except NameError:
-                    from unidoc.detection import collate_embeddings
-                    collated = collate_embeddings(page_emb)
-                if collated is not None:
-                    embeddings.append(collated)
+    embeddings = extract_embeddings_from_pdfs(
+        pdf_paths,
+        pipeline,
+        pages=pages,
+        show_progress=True,
+        progress_desc=f"{output_path.stem}"
+    )
     output_path.parent.mkdir(parents=True, exist_ok=True)
     torch.save(embeddings, output_path)
     print(f"Saved {len(embeddings)} samples to {output_path}")

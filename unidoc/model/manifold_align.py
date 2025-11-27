@@ -507,7 +507,9 @@ def train_epoch(
     total_loss_sum = 0.0
     num_batches = 0
 
-    for batch in dataloader:
+    iterator = tqdm(dataloader, desc="Train", leave=False)
+
+    for batch in iterator:
         # Move batch to device
         h_text = batch["h_text"].to(device)
         h_image = batch["h_image"].to(device)

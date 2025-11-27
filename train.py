@@ -10,6 +10,7 @@ from torch.utils.data import Dataset, DataLoader
 from pathlib import Path
 from typing import List, Optional, Tuple, Callable, Dict, Any
 import json
+from tqdm import tqdm
 
 from unidoc.detection import DetectionPipeline, collate_embeddings
 from unidoc.model import (
@@ -137,7 +138,9 @@ class EmbeddingDataset(Dataset):
 def extract_embeddings_from_pdfs(
     pdf_paths: List[Path],
     pipeline: DetectionPipeline,
-    pages: Optional[List[int]] = None
+    pages: Optional[List[int]] = None,
+    show_progress: bool = False,
+    progress_desc: str = "processing"
 ) -> List[dict]:
     """
     PDF 리스트에서 embedding 추출
@@ -155,7 +158,12 @@ def extract_embeddings_from_pdfs(
 
     all_embeddings = []
 
-    for pdf_path in pdf_paths:
+    iterator = pdf_paths
+    if show_progress:
+        from tqdm import tqdm
+        iterator = tqdm(pdf_paths, desc=progress_desc)
+
+    for pdf_path in iterator:
         try:
             page_embeddings = pipeline.process_pdf(pdf_path, pages=pages)
             for page_emb in page_embeddings:
@@ -384,7 +392,8 @@ def evaluate(
     num_batches = 0
 
     with torch.no_grad():
-        for batch in dataloader:
+        iterator = tqdm(dataloader, desc="Eval", leave=False)
+        for batch in iterator:
             h_text = batch["h_text"].to(device)
             h_image = batch["h_image"].to(device)
             h_layout = batch["h_layout"].to(device)
