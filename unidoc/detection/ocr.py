@@ -63,6 +63,9 @@ class OCREngine:
             image = image.crop((x1, y1, x2, y2))
 
         # PIL Image → numpy array
+        if image.width == 0 or image.height == 0:
+            return ""
+
         image_array = np.array(image)
 
         # OCR 실행
@@ -99,6 +102,9 @@ class OCREngine:
             image = image.crop((x1, y1, x2, y2))
 
         # PIL Image → numpy array
+        if image.width == 0 or image.height == 0:
+            return []
+
         image_array = np.array(image)
 
         # OCR 실행

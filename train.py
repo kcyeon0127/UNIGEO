@@ -153,9 +153,6 @@ def extract_embeddings_from_pdfs(
     Returns:
         collate_embeddings() 출력 리스트
     """
-    if pages is None:
-        pages = [1]
-
     all_embeddings = []
 
     iterator = pdf_paths
@@ -233,8 +230,17 @@ def train(
 
     if train_embeddings_cache:
         for cache_path in train_embeddings_cache:
+            cache_path = Path(cache_path)
             cache_data = torch.load(cache_path)
-            train_embeddings.extend(cache_data)
+            if isinstance(cache_data, dict) and "embeddings" in cache_data:
+                train_embeddings.extend(cache_data["embeddings"])
+                if "labels" in cache_data and cache_data["labels"] is not None:
+                    if train_labels is None:
+                        train_labels = cache_data["labels"]
+                    else:
+                        train_labels.extend(cache_data["labels"])
+            else:
+                train_embeddings.extend(cache_data)
         print(f"Loaded {len(train_embeddings)} cached training samples")
     elif train_pdf_paths:
         print("Initializing pipeline...")
@@ -247,8 +253,17 @@ def train(
 
     if val_embeddings_cache:
         for cache_path in val_embeddings_cache:
+            cache_path = Path(cache_path)
             cache_data = torch.load(cache_path)
-            val_embeddings.extend(cache_data)
+            if isinstance(cache_data, dict) and "embeddings" in cache_data:
+                val_embeddings.extend(cache_data["embeddings"])
+                if "labels" in cache_data and cache_data["labels"] is not None:
+                    if val_labels is None:
+                        val_labels = cache_data["labels"]
+                    else:
+                        val_labels.extend(cache_data["labels"])
+            else:
+                val_embeddings.extend(cache_data)
         print(f"Loaded {len(val_embeddings)} cached validation samples")
     elif val_pdf_paths:
         if 'pipeline' not in locals():

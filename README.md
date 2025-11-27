@@ -121,7 +121,6 @@ from unidoc.detection import DetectionPipeline
 
 # 파이프라인 초기화
 pipeline = DetectionPipeline(
-    # use_lite 플래그 제거 - 항상 정식 Qwen encoder 사용
     ocr_languages=['en'],       # OCR 언어
     detection_confidence=0.3    # detection threshold
 )
