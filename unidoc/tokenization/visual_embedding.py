@@ -201,7 +201,9 @@ class VisualEmbedding(nn.Module):
         min_size = 28
         if image.width < min_size or image.height < min_size:
             # 최소 크기로 resize (aspect ratio 유지)
-            scale = max(min_size / image.width, min_size / image.height)
+            safe_width = max(image.width, 1)
+            safe_height = max(image.height, 1)
+            scale = max(min_size / safe_width, min_size / safe_height)
             new_width = int(image.width * scale)
             new_height = int(image.height * scale)
             image = image.resize((new_width, new_height), Image.Resampling.LANCZOS)
