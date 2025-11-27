@@ -97,12 +97,20 @@ class TextEmbedding(nn.Module):
             raise RuntimeError("Unable to locate language model inside Qwen2-VL checkpoint")
 
         # embed_tokens 위치 탐색
-        self.embed_tokens = getattr(language_model, "embed_tokens", None)
-        if self.embed_tokens is None and hasattr(language_model, "model"):
-            self.embed_tokens = getattr(language_model.model, "embed_tokens", None)
+        embed_module = None
+        if hasattr(language_model, "get_input_embeddings"):
+            embed_module = language_model.get_input_embeddings()
+        if embed_module is None and hasattr(language_model, "model"):
+            inner = language_model.model
+            embed_module = getattr(inner, "embed_tokens", None)
 
-        if self.embed_tokens is None:
+        if embed_module is None:
+            embed_module = getattr(language_model, "embed_tokens", None)
+
+        if embed_module is None:
             raise RuntimeError("Qwen2-VL language model does not expose embed_tokens")
+
+        self.embed_tokens = embed_module
 
         # Transformer layer/norm 모듈 탐색
         transformer = language_model
