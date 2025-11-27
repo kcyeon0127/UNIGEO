@@ -180,6 +180,8 @@ class RegionTokenizer(nn.Module):
         has_text = region.text and region.text.strip()
         if has_text:
             h_text = self.text_encoder.encode(region.text)
+        else:
+            region.text = ""
 
         # 2. Visual embedding (FIGURE/TABLE만)
         h_image = None

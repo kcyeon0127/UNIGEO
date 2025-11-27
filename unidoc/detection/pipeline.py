@@ -211,6 +211,8 @@ class DetectionPipeline:
         h_text = None
         if region.text and region.text.strip():
             h_text = self.text_encoder.encode(region.text)
+        else:
+            region.text = ""
 
         # 2. Visual embedding (Figure/Table만)
         h_image = None

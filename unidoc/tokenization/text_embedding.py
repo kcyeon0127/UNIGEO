@@ -160,6 +160,9 @@ class TextEmbedding(nn.Module):
         if self.embed_tokens is None:
             raise RuntimeError("Model components not loaded. Call _load_model_components() or set_model_components() first.")
 
+        if text is None:
+            text = ""
+
         # Tokenize
         inputs = self.tokenizer(
             text,
@@ -205,6 +208,8 @@ class TextEmbedding(nn.Module):
         """
         if self.embed_tokens is None:
             raise RuntimeError("Model components not loaded.")
+
+        texts = [t if t is not None else "" for t in texts]
 
         # Tokenize with padding
         inputs = self.tokenizer(
