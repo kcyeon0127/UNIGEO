@@ -351,6 +351,12 @@ PyMuPDF>=1.23.0  # for legacy pipeline
 | spiqa | 논문 | 논문 이미지 QA |
 | scigraphvqa | 논문 그래프 | 과학 그래프 VQA |
 
+### Embedding Cache
+
+전처리 시간을 줄이려면 `preprocess/create_split.py`로 train/val/test JSON을 만든 뒤
+`preprocess/cache_embeddings.py`를 실행하여 `.pt` 캐시(embeddings+labels)를 생성하세요.
+학습 시 `--cache_train cache/feta_tab/train.pt ...`처럼 경로를 넘기면 Detection/OCR 단계를 반복할 필요가 없습니다.
+
 ---
 
 ## TODO

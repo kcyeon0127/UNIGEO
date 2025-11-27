@@ -210,13 +210,16 @@ class DetectionPipeline:
         # 2. Visual embedding (Figure/Table만)
         h_image = None
         if region.label in [RegionLabel.FIGURE, RegionLabel.TABLE]:
-            if region.image is not None:
-                h_image = self.visual_encoder.encode(region.image)
-            else:
-                # crop 안 되어있으면 직접 crop
-                cropped = self._crop_region(page_image, region.bbox)
-                if cropped:
-                    h_image = self.visual_encoder.encode(cropped)
+            try:
+                if region.image is not None:
+                    h_image = self.visual_encoder.encode(region.image)
+                else:
+                    cropped = self._crop_region(page_image, region.bbox)
+                    if cropped:
+                        h_image = self.visual_encoder.encode(cropped)
+            except Exception as e:
+                print(f"[VisualEmbedding] Skipping region {region.region_id} due to error: {e}")
+                h_image = None
 
         # 3. Layout embedding (항상)
         region_type_id = self.LABEL_TO_TYPE_ID.get(region.label, 11)

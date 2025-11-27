@@ -561,7 +561,6 @@ def train_epoch(
             layout_seq_mask=layout_seq_mask
         )
 
-        # Contrastive alignment loss
         align_loss = contrastive_alignment(
             out["z_text"],
             out["z_image"],
@@ -595,7 +594,7 @@ def train_epoch(
             lambda_region * region_loss
         )
 
-        # Task loss (if labels provided)
+        task_loss = torch.tensor(0.0, device=device)
         if "labels" in batch and model.classifier is not None:
             labels = batch["labels"].to(device)
             task_loss = F.cross_entropy(out["logits"], labels)
@@ -608,5 +607,12 @@ def train_epoch(
 
         total_loss_sum += total_loss.item()
         num_batches += 1
+
+        iterator.set_postfix(
+            align=align_loss.item(),
+            region=region_loss.item() if lambda_region > 0 else 0.0,
+            ortho=ortho_loss.item(),
+            task=task_loss.item() if ("labels" in batch and model.classifier is not None) else 0.0
+        )
 
     return total_loss_sum / max(num_batches, 1)

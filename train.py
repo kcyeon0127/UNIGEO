@@ -41,6 +41,8 @@ class EmbeddingDataset(Dataset):
         self.max_text_regions = max_text_regions
         self.max_image_regions = max_image_regions
         self.max_layout_regions = max_layout_regions
+        self.trunc_stats = {"text": 0, "image": 0, "layout": 0}
+        self._trunc_warned = False
 
     def __len__(self):
         return len(self.embeddings_list)
@@ -49,13 +51,13 @@ class EmbeddingDataset(Dataset):
         emb = self.embeddings_list[idx]
 
         layout_seq, layout_seq_mask = self._prepare_sequence(
-            emb.get("h_layout"), self.max_layout_regions
+            emb.get("h_layout"), self.max_layout_regions, stat_key="layout"
         )
         text_seq, text_seq_mask = self._prepare_sequence(
-            emb.get("h_text"), self.max_text_regions
+            emb.get("h_text"), self.max_text_regions, stat_key="text"
         )
         image_seq, image_seq_mask = self._prepare_sequence(
-            emb.get("h_image"), self.max_image_regions
+            emb.get("h_image"), self.max_image_regions, stat_key="image"
         )
 
         h_layout = self._aggregate(layout_seq, layout_seq_mask)
@@ -95,6 +97,7 @@ class EmbeddingDataset(Dataset):
         self,
         tensor: Optional[torch.Tensor],
         max_len: int,
+        stat_key: Optional[str] = None,
     ) -> Tuple[torch.Tensor, torch.Tensor]:
         seq = torch.zeros(max_len, self.hidden_dim, dtype=torch.float32)
         mask = torch.zeros(max_len, dtype=torch.bool)
@@ -106,10 +109,17 @@ class EmbeddingDataset(Dataset):
         if tensor.dim() == 1:
             tensor = tensor.unsqueeze(0)
 
-        length = min(tensor.size(0), max_len)
+        orig_len = tensor.size(0)
+        length = min(orig_len, max_len)
         if length > 0:
             seq[:length] = tensor[:length]
             mask[:length] = True
+
+        if stat_key and orig_len > max_len:
+            self.trunc_stats[stat_key] += 1
+            if not self._trunc_warned:
+                print(f"[EmbeddingDataset] Truncated {stat_key} sequences encountered.")
+                self._trunc_warned = True
 
         return seq, mask
 
@@ -236,7 +246,7 @@ def train(
                 train_embeddings.extend(cache_data["embeddings"])
                 if "labels" in cache_data and cache_data["labels"] is not None:
                     if train_labels is None:
-                        train_labels = cache_data["labels"]
+                        train_labels = list(cache_data["labels"])
                     else:
                         train_labels.extend(cache_data["labels"])
             else:
@@ -293,8 +303,8 @@ def train(
 
     if val_embeddings:
         val_dataset = EmbeddingDataset(
-            val_embeddings,
-            val_labels,
+        val_embeddings,
+        val_labels,
             hidden_dim=hidden_dim,
             pooling_mode=pooling_mode,
             max_text_regions=max_text_regions,
@@ -478,6 +488,7 @@ def evaluate(
                 lambda_region * region_loss
             )
 
+            task_loss = torch.tensor(0.0, device=device)
             if "labels" in batch and model.classifier is not None:
                 labels = batch["labels"].to(device)
                 task_loss = nn.functional.cross_entropy(out["logits"], labels)
@@ -485,6 +496,13 @@ def evaluate(
 
             total_loss += loss.item()
             num_batches += 1
+
+            iterator.set_postfix(
+                align=align_loss.item(),
+                region=region_loss.item() if lambda_region > 0 else 0.0,
+                ortho=ortho_loss.item(),
+                task=task_loss.item() if ("labels" in batch and model.classifier is not None) else 0.0
+            )
 
     return total_loss / max(num_batches, 1)
 

@@ -53,8 +53,12 @@ def _save_embeddings(
         show_progress=True,
         progress_desc=f"{output_path.stem}"
     )
+    payload = {
+        "embeddings": embeddings,
+        "labels": None
+    }
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    torch.save(embeddings, output_path)
+    torch.save(payload, output_path)
     print(f"Saved {len(embeddings)} samples to {output_path}")
 
 
