@@ -35,6 +35,7 @@ def main():
     parser.add_argument("--instruction", type=str, default="Summarize the document region.", help="Instruction prompt")
     parser.add_argument("--model", type=str, default="Qwen/Qwen2-VL-7B-Instruct", help="Qwen model to use")
     parser.add_argument("--max_new_tokens", type=int, default=64)
+    parser.add_argument("--output", type=str, default=None, help="Optional path to save generation result")
     args = parser.parse_args()
 
     cache_path = Path(args.cache)
@@ -46,10 +47,15 @@ def main():
         args.instruction,
         max_new_tokens=args.max_new_tokens
     )
-    print("=== Adapter Output ===")
-    print(output)
+    if args.output:
+        out_path = Path(args.output)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(output)
+        print(f"Saved output to {out_path}")
+    else:
+        print("=== Adapter Output ===")
+        print(output)
 
 
 if __name__ == "__main__":
     main()
-
