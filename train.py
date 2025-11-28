@@ -393,6 +393,10 @@ def train(
             print(f"  Saved best model to {save_path}")
 
     print("Training completed!")
+    if isinstance(train_dataset, EmbeddingDataset):
+        print("Train truncation stats:", train_dataset.trunc_stats)
+    if val_loader and val_dataset is not None:
+        print("Val truncation stats:", val_dataset.trunc_stats)
     return model
 
 
