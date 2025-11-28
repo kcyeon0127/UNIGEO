@@ -88,6 +88,16 @@ class EmbeddingDataset(Dataset):
             "layout_seq_mask": layout_seq_mask,
         }
 
+        question_embedding = emb.get("question_embedding")
+        if question_embedding is not None:
+            if isinstance(question_embedding, torch.Tensor):
+                q_embed = question_embedding.detach().cpu().float()
+            else:
+                q_embed = torch.tensor(question_embedding, dtype=torch.float32)
+            if q_embed.dim() == 0:
+                q_embed = q_embed.unsqueeze(0)
+            item["question_embedding"] = q_embed
+
         if self.labels is not None:
             item["labels"] = torch.tensor(self.labels[idx], dtype=torch.long)
 
@@ -204,6 +214,8 @@ def train(
     lambda_ortho: float = 5e-4,
     lambda_region: float = 0.01,
     pooling_mode: str = "attention",
+    question_dim: Optional[int] = None,
+    use_question_align: bool = False,
     max_text_regions: int = 64,
     max_image_regions: int = 64,
     max_layout_regions: int = 256,
@@ -228,6 +240,8 @@ def train(
         lr: learning rate
         lambda_align: alignment loss 가중치
         lambda_ortho: orthogonal regularization 가중치
+        question_dim: 질문 embedding 차원 (None이면 자동 추정)
+        use_question_align: 질문 기반 정렬 사용 여부
         device: 디바이스
         save_path: 모델 저장 경로
         model_cls: 학습에 사용할 모델 클래스
@@ -289,6 +303,27 @@ def train(
     else:
         val_embeddings = None
 
+    if use_question_align:
+        if question_dim is None:
+            inferred_dim = None
+            for emb in train_embeddings:
+                q_emb = emb.get("question_embedding")
+                if q_emb is not None:
+                    if isinstance(q_emb, torch.Tensor):
+                        inferred_dim = q_emb.numel() if q_emb.dim() == 1 else q_emb.shape[-1]
+                    else:
+                        q_tensor = torch.tensor(q_emb)
+                        inferred_dim = q_tensor.numel() if q_tensor.dim() == 1 else q_tensor.shape[-1]
+                    break
+            if inferred_dim is None:
+                raise ValueError("use_question_align=True but question embeddings were not found in training data")
+            question_dim = int(inferred_dim)
+        else:
+            question_dim = int(question_dim)
+    else:
+        if question_dim is None:
+            question_dim = hidden_dim
+
     # 3. Dataset & DataLoader
     train_dataset = EmbeddingDataset(
         train_embeddings,
@@ -335,6 +370,8 @@ def train(
         "z_dim": z_dim,
         "num_labels": num_labels,
         "pooling_mode": pooling_mode,
+        "question_dim": question_dim,
+        "use_question_align": use_question_align,
     }
     model_config.update(model_kwargs)
 
@@ -443,6 +480,7 @@ def evaluate(
             image_mask = batch.get("image_mask").to(device)
             layout_mask = batch.get("layout_mask")
             layout_mask = layout_mask.to(device) if layout_mask is not None else torch.ones_like(text_mask)
+            question_embed = batch.get("question_embedding")
 
             def _move(tensor):
                 return tensor.to(device) if tensor is not None else None
@@ -455,6 +493,7 @@ def evaluate(
             layout_seq_mask = _move(layout_seq_mask)
             text_to_layout = _move(text_to_layout)
             image_to_layout = _move(image_to_layout)
+            question_embed = _move(question_embed)
 
             out = model(
                 h_text,
@@ -465,7 +504,8 @@ def evaluate(
                 image_seq=image_seq,
                 image_seq_mask=image_seq_mask,
                 layout_seq=layout_seq,
-                layout_seq_mask=layout_seq_mask
+                layout_seq_mask=layout_seq_mask,
+                question_embed=question_embed
             )
 
             align_loss = contrastive_alignment(
@@ -534,6 +574,8 @@ if __name__ == "__main__":
     parser.add_argument("--max_image_regions", type=int, default=32, help="Max image regions per document")
     parser.add_argument("--max_layout_regions", type=int, default=128, help="Max layout regions per document")
     parser.add_argument("--lambda_region", type=float, default=0.0, help="Region-level contrastive weight")
+    parser.add_argument("--use_question_align", action="store_true", help="Enable question-conditioned alignment gates")
+    parser.add_argument("--question_dim", type=int, default=None, help="Dimension of precomputed question embeddings")
 
     args = parser.parse_args()
 
@@ -563,6 +605,8 @@ if __name__ == "__main__":
         lr=args.lr,
         save_path=Path(args.save_path),
         pooling_mode=args.pooling_mode,
+        question_dim=args.question_dim,
+        use_question_align=args.use_question_align,
         max_text_regions=args.max_text_regions,
         max_image_regions=args.max_image_regions,
         max_layout_regions=args.max_layout_regions,

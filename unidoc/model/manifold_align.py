@@ -84,6 +84,28 @@ class LinearProjector(nn.Module):
         return torch.tensor(0.0, device=device)
 
 
+class QuestionGate(nn.Module):
+    """Applies question-conditioned gating to modality embeddings."""
+
+    def __init__(self, z_dim: int):
+        super().__init__()
+        self.gate = nn.Sequential(
+            nn.Linear(z_dim * 2, z_dim),
+            nn.LayerNorm(z_dim),
+            nn.GELU(),
+            nn.Linear(z_dim, z_dim),
+            nn.Sigmoid()
+        )
+
+    def forward(self, modality_z: torch.Tensor, question_z: torch.Tensor) -> torch.Tensor:
+        if question_z.dim() == 1:
+            question_z = question_z.unsqueeze(0)
+        if modality_z.shape[0] != question_z.shape[0]:
+            raise ValueError("Mismatch in batch size for modality/question embeddings")
+        gate = self.gate(torch.cat([modality_z, question_z], dim=-1))
+        return modality_z * gate + question_z * (1 - gate)
+
+
 class AttentionPooler(nn.Module):
     """Learnable attention pooling over region sequences."""
 
@@ -118,7 +140,9 @@ class ManifoldAlignModel(nn.Module):
         z_dim: int = 512,
         num_labels: int = None,
         projector_cls: Optional[Callable[[int, int], nn.Module]] = None,
-        pooling_mode: str = "mean"
+        pooling_mode: str = "mean",
+        question_dim: Optional[int] = None,
+        use_question_align: bool = False
     ):
         """
         Args:
@@ -134,6 +158,8 @@ class ManifoldAlignModel(nn.Module):
         self.z_dim = z_dim
         self.num_labels = num_labels
         self.pooling_mode = pooling_mode
+        self.use_question_align = use_question_align
+        self.question_dim = question_dim
 
         projector_cls = projector_cls or OrthoLinear
 
@@ -150,6 +176,18 @@ class ManifoldAlignModel(nn.Module):
             self.text_pooler = None
             self.image_pooler = None
             self.layout_pooler = None
+
+        if self.use_question_align:
+            if self.question_dim is None:
+                raise ValueError("question_dim must be provided when use_question_align=True")
+            self.question_proj = nn.Sequential(
+                nn.Linear(self.question_dim, z_dim),
+                nn.LayerNorm(z_dim),
+                nn.GELU()
+            )
+            self.text_q_gate = QuestionGate(z_dim)
+            self.image_q_gate = QuestionGate(z_dim)
+            self.layout_q_gate = QuestionGate(z_dim)
 
         # Classifier: fused representation -> labels (optional)
         if num_labels is not None:
@@ -171,7 +209,8 @@ class ManifoldAlignModel(nn.Module):
         image_seq: Optional[torch.Tensor] = None,
         image_seq_mask: Optional[torch.Tensor] = None,
         layout_seq: Optional[torch.Tensor] = None,
-        layout_seq_mask: Optional[torch.Tensor] = None
+        layout_seq_mask: Optional[torch.Tensor] = None,
+        question_embed: Optional[torch.Tensor] = None
     ) -> Dict:
         """
         Forward pass
@@ -212,11 +251,23 @@ class ManifoldAlignModel(nn.Module):
         z_i = self.T_image(h_image)  # [B, z_dim]
         z_l = self.T_layout(h_layout)  # [B, z_dim]
 
+        q_z = None
+        if self.use_question_align and question_embed is not None:
+            if question_embed.dim() == 1:
+                question_embed = question_embed.unsqueeze(0)
+            q_z = self.question_proj(question_embed)
+            z_t = self.text_q_gate(z_t, q_z)
+            z_i = self.image_q_gate(z_i, q_z)
+            z_l = self.layout_q_gate(z_l, q_z)
+
         result = {
             "z_text": z_t,
             "z_image": z_i,
             "z_layout": z_l,
         }
+
+        if q_z is not None:
+            result["z_question"] = q_z
 
         # Classification (optional)
         if self.classifier is not None:
@@ -542,12 +593,15 @@ def train_epoch(
         text_mask = batch.get("text_mask")
         image_mask = batch.get("image_mask")
         layout_mask = batch.get("layout_mask")
+        question_embed = batch.get("question_embedding")
         if text_mask is not None:
             text_mask = text_mask.to(device)
         if image_mask is not None:
             image_mask = image_mask.to(device)
         if layout_mask is not None:
             layout_mask = layout_mask.to(device)
+        if question_embed is not None:
+            question_embed = question_embed.to(device)
 
         # Forward pass
         out = model(
@@ -559,7 +613,8 @@ def train_epoch(
             image_seq=image_seq,
             image_seq_mask=image_seq_mask,
             layout_seq=layout_seq,
-            layout_seq_mask=layout_seq_mask
+            layout_seq_mask=layout_seq_mask,
+            question_embed=question_embed
         )
 
         align_loss = contrastive_alignment(
