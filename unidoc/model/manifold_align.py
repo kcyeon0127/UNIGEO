@@ -13,6 +13,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from typing import Optional, Dict, Callable
 from tqdm import tqdm
+from torch.nn import TransformerEncoder, TransformerEncoderLayer
 
 
 class OrthoLinear(nn.Module):
@@ -142,7 +143,10 @@ class ManifoldAlignModel(nn.Module):
         projector_cls: Optional[Callable[[int, int], nn.Module]] = None,
         pooling_mode: str = "mean",
         question_dim: Optional[int] = None,
-        use_question_align: bool = False
+        use_question_align: bool = False,
+        use_question_transformer: bool = False,
+        question_transformer_layers: int = 2,
+        question_transformer_heads: int = 8
     ):
         """
         Args:
@@ -160,6 +164,10 @@ class ManifoldAlignModel(nn.Module):
         self.pooling_mode = pooling_mode
         self.use_question_align = use_question_align
         self.question_dim = question_dim
+        self.use_question_transformer = use_question_transformer
+        self.question_transformer_layers = question_transformer_layers
+        self.question_transformer_heads = question_transformer_heads
+        self.sequence_dim = text_dim
 
         projector_cls = projector_cls or OrthoLinear
 
@@ -188,6 +196,26 @@ class ManifoldAlignModel(nn.Module):
             self.text_q_gate = QuestionGate(z_dim)
             self.image_q_gate = QuestionGate(z_dim)
             self.layout_q_gate = QuestionGate(z_dim)
+            self.question_context_proj = nn.Sequential(
+                nn.Linear(self.sequence_dim, z_dim),
+                nn.LayerNorm(z_dim),
+                nn.GELU()
+            )
+
+        if self.use_question_transformer:
+            if self.question_dim is None:
+                raise ValueError("question_dim must be provided when use_question_transformer=True")
+            encoder_layer = TransformerEncoderLayer(
+                d_model=self.sequence_dim,
+                nhead=self.question_transformer_heads,
+                batch_first=True
+            )
+            self.question_transformer = TransformerEncoder(
+                encoder_layer,
+                num_layers=self.question_transformer_layers
+            )
+            self.question_transformer_norm = nn.LayerNorm(self.sequence_dim)
+            self.question_token_proj = nn.Linear(self.question_dim, self.sequence_dim)
 
         # Classifier: fused representation -> labels (optional)
         if num_labels is not None:
@@ -233,6 +261,26 @@ class ManifoldAlignModel(nn.Module):
             "layout": self.layout_pooler,
         }
 
+        question_context = None
+        if self.use_question_transformer and question_embed is not None:
+            (
+                text_seq,
+                text_seq_mask,
+                image_seq,
+                image_seq_mask,
+                layout_seq,
+                layout_seq_mask,
+                question_context,
+            ) = self._question_condition_sequences(
+                question_embed,
+                text_seq,
+                text_seq_mask,
+                image_seq,
+                image_seq_mask,
+                layout_seq,
+                layout_seq_mask,
+            )
+
         h_text = self._pool_modal(
             h_text, text_seq, text_seq_mask,
             pooler=poolers["text"] if self.pooling_mode == "attention" else None
@@ -255,7 +303,11 @@ class ManifoldAlignModel(nn.Module):
         if self.use_question_align and question_embed is not None:
             if question_embed.dim() == 1:
                 question_embed = question_embed.unsqueeze(0)
-            q_z = self.question_proj(question_embed)
+            question_source = question_context if question_context is not None else question_embed
+            if question_context is not None:
+                q_z = self.question_context_proj(question_source)
+            else:
+                q_z = self.question_proj(question_source)
             z_t = self.text_q_gate(z_t, q_z)
             z_i = self.image_q_gate(z_i, q_z)
             z_l = self.layout_q_gate(z_l, q_z)
@@ -325,6 +377,81 @@ class ManifoldAlignModel(nn.Module):
         if zero_rows.any():
             mean = mean.masked_fill(zero_rows, 0.0)
         return mean
+
+    def _question_condition_sequences(
+        self,
+        question_embed: torch.Tensor,
+        text_seq: Optional[torch.Tensor],
+        text_seq_mask: Optional[torch.Tensor],
+        image_seq: Optional[torch.Tensor],
+        image_seq_mask: Optional[torch.Tensor],
+        layout_seq: Optional[torch.Tensor],
+        layout_seq_mask: Optional[torch.Tensor],
+    ):
+        sequences = []
+        masks = []
+        sections = []
+
+        def add_section(name: str, seq: Optional[torch.Tensor], mask: Optional[torch.Tensor]):
+            if seq is not None and mask is not None:
+                sequences.append(seq)
+                masks.append(mask)
+                sections.append((name, seq.size(1)))
+
+        add_section("text", text_seq, text_seq_mask)
+        add_section("image", image_seq, image_seq_mask)
+        add_section("layout", layout_seq, layout_seq_mask)
+
+        if not sequences:
+            return (
+                text_seq,
+                text_seq_mask,
+                image_seq,
+                image_seq_mask,
+                layout_seq,
+                layout_seq_mask,
+                None,
+            )
+
+        concat_seq = torch.cat(sequences, dim=1)
+        concat_mask = torch.cat(masks, dim=1)
+        B = concat_seq.size(0)
+
+        q_token = self.question_token_proj(question_embed).unsqueeze(1)
+        padding_mask = torch.cat([
+            torch.zeros(B, 1, device=concat_mask.device, dtype=torch.bool),
+            ~concat_mask,
+        ], dim=1)
+
+        full_seq = torch.cat([q_token, concat_seq], dim=1)
+        encoded = self.question_transformer(
+            full_seq,
+            src_key_padding_mask=padding_mask
+        )
+        encoded = self.question_transformer_norm(encoded)
+
+        question_output = encoded[:, 0]
+        encoded_tokens = encoded[:, 1:]
+
+        offset = 0
+        updated = {}
+        for name, length in sections:
+            updated[name] = encoded_tokens[:, offset:offset + length]
+            offset += length
+
+        text_seq = updated.get("text", text_seq)
+        image_seq = updated.get("image", image_seq)
+        layout_seq = updated.get("layout", layout_seq)
+
+        return (
+            text_seq,
+            text_seq_mask,
+            image_seq,
+            image_seq_mask,
+            layout_seq,
+            layout_seq_mask,
+            question_output,
+        )
 
 
 class ConcatBaselineModel(nn.Module):

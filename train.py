@@ -219,6 +219,9 @@ def train(
     pooling_mode: str = "attention",
     question_dim: Optional[int] = None,
     use_question_align: bool = False,
+    use_question_transformer: bool = False,
+    question_transformer_layers: int = 2,
+    question_transformer_heads: int = 8,
     max_text_regions: int = 64,
     max_image_regions: int = 64,
     max_layout_regions: int = 256,
@@ -245,6 +248,7 @@ def train(
         lambda_ortho: orthogonal regularization 가중치
         question_dim: 질문 embedding 차원 (None이면 자동 추정)
         use_question_align: 질문 기반 정렬 사용 여부
+        use_question_transformer: 질문 토큰 self-attention 사용 여부
         device: 디바이스
         save_path: 모델 저장 경로
         model_cls: 학습에 사용할 모델 클래스
@@ -375,6 +379,9 @@ def train(
         "pooling_mode": pooling_mode,
         "question_dim": question_dim,
         "use_question_align": use_question_align,
+        "use_question_transformer": use_question_transformer,
+        "question_transformer_layers": question_transformer_layers,
+        "question_transformer_heads": question_transformer_heads,
     }
     model_config.update(model_kwargs)
 
@@ -579,6 +586,9 @@ if __name__ == "__main__":
     parser.add_argument("--lambda_region", type=float, default=0.0, help="Region-level contrastive weight")
     parser.add_argument("--use_question_align", action="store_true", help="Enable question-conditioned alignment gates")
     parser.add_argument("--question_dim", type=int, default=None, help="Dimension of precomputed question embeddings")
+    parser.add_argument("--use_question_transformer", action="store_true", help="Enable question-token self-attention over region sequences")
+    parser.add_argument("--question_transformer_layers", type=int, default=2, help="Number of transformer layers for question conditioning")
+    parser.add_argument("--question_transformer_heads", type=int, default=8, help="Transformer attention heads for question conditioning")
 
     args = parser.parse_args()
 
@@ -610,6 +620,9 @@ if __name__ == "__main__":
         pooling_mode=args.pooling_mode,
         question_dim=args.question_dim,
         use_question_align=args.use_question_align,
+        use_question_transformer=args.use_question_transformer,
+        question_transformer_layers=args.question_transformer_layers,
+        question_transformer_heads=args.question_transformer_heads,
         max_text_regions=args.max_text_regions,
         max_image_regions=args.max_image_regions,
         max_layout_regions=args.max_layout_regions,
