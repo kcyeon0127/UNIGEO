@@ -40,6 +40,27 @@ def _load_doc_list(doc_list_path: Optional[Path]) -> Optional[List[str]]:
     return lines
 
 
+def _load_split_docs(
+    split_file: Optional[Path],
+    split_name: Optional[str],
+    split_root: Optional[Path],
+) -> Optional[List[str]]:
+    if split_file is None or split_name is None:
+        return None
+
+    data = json.loads(split_file.read_text())
+    if split_name not in data:
+        raise ValueError(f"Split '{split_name}' not found in {split_file}")
+
+    docs: List[str] = []
+    for entry in data[split_name]:
+        path = Path(entry)
+        if not path.is_absolute() and split_root:
+            path = Path(split_root) / path
+        docs.append(path.name)
+    return docs
+
+
 def _normalize_doc_id(value: str) -> str:
     return Path(value).name.lower()
 
@@ -100,6 +121,7 @@ def _resolve_doc_ids(
     embeddings: List[dict],
     doc_key: str,
     doc_list: Optional[List[str]],
+    split_docs: Optional[List[str]],
 ) -> List[str]:
     resolved: List[str] = []
     for idx, sample in enumerate(embeddings):
@@ -107,12 +129,14 @@ def _resolve_doc_ids(
         if isinstance(doc_value, str) and doc_value:
             resolved.append(doc_value)
             continue
-        if doc_list is not None:
-            if idx >= len(doc_list):
+        source_list = doc_list or split_docs
+        if source_list is not None:
+            if len(source_list) != len(embeddings):
                 raise ValueError(
-                    f"doc_list only has {len(doc_list)} entries but cache has {len(embeddings)} samples"
+                    "Provided doc list/split does not match cache length. "
+                    f"List length={len(source_list)}, cache samples={len(embeddings)}"
                 )
-            resolved.append(doc_list[idx])
+            resolved.append(source_list[idx])
             continue
         available_keys = list(sample.keys())
         raise ValueError(
@@ -195,7 +219,11 @@ def augment_cache_with_questions(args: argparse.Namespace) -> None:
         raise ValueError("Question file did not yield any doc/question pairs")
 
     doc_list = _load_doc_list(Path(args.doc_list)) if args.doc_list else None
-    doc_ids = _resolve_doc_ids(embeddings, args.doc_key, doc_list)
+    split_docs = None
+    if doc_list is None and args.split_file:
+        split_root = Path(args.split_root) if args.split_root else None
+        split_docs = _load_split_docs(Path(args.split_file), args.split_name, split_root)
+    doc_ids = _resolve_doc_ids(embeddings, args.doc_key, doc_list, split_docs)
     sample_questions, missing_docs = _assign_question_texts(doc_ids, question_map, args.assignment)
 
     missing_count = sum(1 for q in sample_questions if q is None)
@@ -268,6 +296,9 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Optional text file listing doc ids per sample when cache lacks doc metadata",
     )
+    parser.add_argument("--split_file", default=None, help="Split JSON (like preprocess/cache_embeddings.py)")
+    parser.add_argument("--split_name", default=None, help="Split name inside split JSON (train/val/test)")
+    parser.add_argument("--split_root", default=None, help="Root directory for relative splits")
     parser.add_argument(
         "--assignment",
         choices=["first", "cycle", "concat"],
