@@ -248,18 +248,26 @@ def augment_cache_with_questions(args: argparse.Namespace) -> None:
 
     text_cache = _encode_unique_questions(unique_texts, encoder)
 
+    kept_embeddings: List[dict] = []
     updated = 0
+    dropped_missing = 0
     for sample, question_text in tqdm(
         zip(embeddings, sample_questions),
         total=len(embeddings),
         desc="Attaching questions",
     ):
         if question_text is None:
+            if args.keep_missing:
+                kept_embeddings.append(sample)
+            else:
+                dropped_missing += 1
             continue
         if (not args.force) and ("question_embedding" in sample):
+            kept_embeddings.append(sample)
             continue
         sample["question_embedding"] = text_cache[question_text].clone()
         sample["question_text"] = question_text
+        kept_embeddings.append(sample)
         updated += 1
 
     output_path: Path
@@ -274,11 +282,11 @@ def augment_cache_with_questions(args: argparse.Namespace) -> None:
     if not args.inplace and output_path != cache_path:
         output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    _save_cache(output_path, embeddings, payload)
+    _save_cache(output_path, kept_embeddings if not args.keep_missing else embeddings, payload)
 
     print(
-        f"[DONE] {cache_path} -> {output_path}: updated {updated} / {total} samples "
-        f"({missing_count} missing)"
+        f"[DONE] {cache_path} -> {output_path}: updated {updated} / {total} samples, "
+        f"dropped {dropped_missing if not args.keep_missing else 0} missing"
     )
 
 
@@ -314,6 +322,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--inplace", action="store_true", help="Overwrite the input cache in-place")
     parser.add_argument("--output_path", default=None, help="Explicit path for the augmented cache")
     parser.add_argument("--output_suffix", default="_with_q", help="Suffix when writing alongside input")
+    parser.add_argument("--keep_missing", action="store_true", help="Keep samples without matching question")
     return parser.parse_args()
 
 
