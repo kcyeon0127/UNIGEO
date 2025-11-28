@@ -180,13 +180,16 @@ def extract_embeddings_from_pdfs(
         from tqdm import tqdm
         iterator = tqdm(pdf_paths, desc=progress_desc)
 
-    for pdf_path in iterator:
+    for pdf_idx, pdf_path in enumerate(iterator):
         try:
             page_embeddings = pipeline.process_pdf(pdf_path, pages=pages)
-            for page_emb in page_embeddings:
+            for page_idx, page_emb in enumerate(page_embeddings):
                 if page_emb:  # 빈 페이지 스킵
                     collated = collate_embeddings(page_emb)
                     if collated is not None:
+                        collated["doc_path"] = Path(pdf_path).name
+                        collated["doc_index"] = pdf_idx
+                        collated["page_index"] = page_idx
                         all_embeddings.append(collated)
         except Exception as e:
             import traceback
