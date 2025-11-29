@@ -351,11 +351,47 @@ PyMuPDF>=1.23.0  # for legacy pipeline
 | spiqa | 논문 | 논문 이미지 QA |
 | scigraphvqa | 논문 그래프 | 과학 그래프 VQA |
 
-### Embedding Cache
+### Question-Conditioned Training Pipeline
 
-전처리 시간을 줄이려면 `preprocess/create_split.py`로 train/val/test JSON을 만든 뒤
-`preprocess/cache_embeddings.py`를 실행하여 `.pt` 캐시(embeddings+labels)를 생성하세요.
-학습 시 `--cache_train cache/feta_tab/train.pt ...`처럼 경로를 넘기면 Detection/OCR 단계를 반복할 필요가 없습니다.
+1. **Region embedding 캐시 생성**
+   ```bash
+   CUDA_VISIBLE_DEVICES=0,1 PYTHONPATH=/root/workspace/UNIGEO \
+   python preprocess/cache_embeddings.py \
+     --split_file data/feta_tab/split.json \
+     --split_root data/feta_tab/docs \
+     --output_dir cache/feta_tab
+   ```
+   (각 데이터셋별 split 파일만 바꿔 반복 실행)
+
+2. **질문 임베딩 추가**
+   ```bash
+   CUDA_VISIBLE_DEVICES=0,1 PYTHONPATH=/root/workspace/UNIGEO \
+   python preprocess/add_question_embeddings.py \
+     --cache_path cache/feta_tab/train.pt \
+     --qa_file data/feta_tab/feta_tab.csv \
+     --doc_column doc_path --question_column question \
+     --doc_key doc_path --assignment cycle \
+     --output_suffix _q
+   ```
+   train/val/test 각각 실행하면 `*_q.pt`가 생성되며 질문이 없는 샘플은 자동으로 제외됩니다.
+
+3. **질문 aware alignment 학습**
+   ```bash
+   CUDA_VISIBLE_DEVICES=2 PYTHONPATH=/root/workspace/UNIGEO \
+   python train.py \
+     --cache_train cache/feta_tab/train_q.pt cache/slidevqa/train_q.pt cache/spiqa/train_q.pt \
+     --cache_val   cache/feta_tab/val_q.pt   cache/slidevqa/val_q.pt   cache/spiqa/val_q.pt \
+     --batch_size 32 --epochs 20 --lr 1e-4 \
+     --pooling_mode attention --lambda_region 0.1 \
+     --use_question_align --use_question_transformer \
+     --question_transformer_layers 2 --question_transformer_heads 8 \
+     --save_path runs/align_fetaslide_spiqa_q.pt
+   ```
+
+   - `--use_question_align`: OrthoLinear z-space에 질문 게이트 적용
+   - `--use_question_transformer`: `[Q] + [DOC TOKENS]` self-attention으로 question-aware region 시퀀스 생성
+
+이 과정을 거치면 질문 조건에 따라 멀티모달 표현을 정렬하고, Qwen 앞단으로 바로 전달할 수 있는 embedding을 얻습니다.
 
 ---
 
