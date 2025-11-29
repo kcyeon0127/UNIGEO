@@ -371,9 +371,11 @@ PyMuPDF>=1.23.0  # for legacy pipeline
      --qa_file data/feta_tab/feta_tab.csv \
      --doc_column doc_path --question_column question \
      --doc_key doc_path --assignment cycle \
+     --label_column answer \
      --output_suffix _q
    ```
    train/val/test 각각 실행하면 `*_q.pt`가 생성되며 질문이 없는 샘플은 자동으로 제외됩니다.
+   `--label_column`을 지정하면 QA 파일의 해당 열을 라벨로 사용하고, 결과 캐시에 `labels`와 `label_vocab`이 함께 저장됩니다.
 
 3. **질문 aware alignment 학습**
    ```bash

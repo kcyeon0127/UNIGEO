@@ -103,13 +103,16 @@ def _build_question_map(
     rows: List[Dict[str, str]],
     doc_column: str,
     question_column: str,
-) -> Dict[str, List[str]]:
-    mapping: Dict[str, List[str]] = defaultdict(list)
+) -> Dict[str, List[Dict[str, str]]]:
+    mapping: Dict[str, List[Dict[str, str]]] = defaultdict(list)
     for row in rows:
         doc_id = _normalize_doc_id(row[doc_column])
-        question = row[question_column].strip()
-        if question:
-            mapping[doc_id].append(question)
+        question = row.get(question_column, "")
+        if not question:
+            continue
+        entry = dict(row)
+        entry["_question_text"] = question.strip()
+        mapping[doc_id].append(entry)
     return mapping
 
 
@@ -146,37 +149,46 @@ def _resolve_doc_ids(
     return resolved
 
 
-def _assign_question_texts(
+def _assign_question_entries(
     doc_ids: List[str],
-    question_map: Dict[str, List[str]],
+    question_map: Dict[str, List[Dict[str, str]]],
     assignment: str,
-) -> Tuple[List[Optional[str]], List[str]]:
+) -> Tuple[List[Optional[Dict[str, str]]], List[str]]:
     counters: Dict[str, int] = defaultdict(int)
     missing_docs: List[str] = []
-    assigned: List[Optional[str]] = []
+    assigned: List[Optional[Dict[str, str]]] = []
 
     for doc_id in doc_ids:
         norm_id = _normalize_doc_id(doc_id)
-        questions = question_map.get(norm_id)
-        if not questions:
+        entries = question_map.get(norm_id)
+        if not entries:
             assigned.append(None)
             missing_docs.append(norm_id)
             continue
 
         if assignment == "first":
-            chosen = questions[0]
+            chosen = entries[0]
         elif assignment == "concat":
-            chosen = " \n".join(questions)
+            merged = dict(entries[0])
+            merged["_question_text"] = " \n".join(entry["_question_text"] for entry in entries)
+            chosen = merged
         elif assignment == "cycle":
             idx = counters[norm_id]
             counters[norm_id] += 1
-            chosen = questions[idx % len(questions)]
+            chosen = entries[idx % len(entries)]
         else:
             raise ValueError(f"Unsupported assignment strategy: {assignment}")
 
         assigned.append(chosen)
 
     return assigned, missing_docs
+
+
+def _encode_labels(label_values: List[str]) -> Tuple[List[int], Dict[str, int]]:
+    unique_labels = sorted(set(label_values))
+    mapping = {label: idx for idx, label in enumerate(unique_labels)}
+    encoded = [mapping[label] for label in label_values]
+    return encoded, mapping
 
 
 def _encode_unique_questions(unique_texts: Sequence[str], encoder: TextEmbedding) -> Dict[str, torch.Tensor]:
@@ -190,6 +202,9 @@ def augment_cache_with_questions(args: argparse.Namespace) -> None:
     cache_path = Path(args.cache_path)
     if not cache_path.exists():
         raise FileNotFoundError(f"Cache file not found: {cache_path}")
+
+    if args.label_column and args.keep_missing:
+        raise ValueError("--keep_missing cannot be used when --label_column is set")
 
     embeddings, payload = _load_cache(cache_path)
     total = len(embeddings)
@@ -224,7 +239,23 @@ def augment_cache_with_questions(args: argparse.Namespace) -> None:
         split_root = Path(args.split_root) if args.split_root else None
         split_docs = _load_split_docs(Path(args.split_file), args.split_name, split_root)
     doc_ids = _resolve_doc_ids(embeddings, args.doc_key, doc_list, split_docs)
-    sample_questions, missing_docs = _assign_question_texts(doc_ids, question_map, args.assignment)
+    sample_entries, missing_docs = _assign_question_entries(doc_ids, question_map, args.assignment)
+
+    sample_questions: List[Optional[str]] = []
+    sample_labels: List[Optional[str]] = []
+    for entry in sample_entries:
+        if entry is None:
+            sample_questions.append(None)
+            sample_labels.append(None)
+            continue
+        sample_questions.append(entry.get("_question_text"))
+        if args.label_column:
+            raw_label = entry.get(args.label_column)
+            if isinstance(raw_label, str):
+                raw_label = raw_label.strip()
+            sample_labels.append(raw_label if raw_label else None)
+        else:
+            sample_labels.append(None)
 
     missing_count = sum(1 for q in sample_questions if q is None)
     if missing_count:
@@ -248,11 +279,15 @@ def augment_cache_with_questions(args: argparse.Namespace) -> None:
 
     text_cache = _encode_unique_questions(unique_texts, encoder)
 
+    final_label_values: List[str] = []
     kept_embeddings: List[dict] = []
     updated = 0
     dropped_missing = 0
-    for sample, question_text in tqdm(
-        zip(embeddings, sample_questions),
+    dropped_label_missing = 0
+    iter_labels = sample_labels if args.label_column else [None] * len(sample_questions)
+
+    for sample, question_text, label_value in tqdm(
+        zip(embeddings, sample_questions, iter_labels),
         total=len(embeddings),
         desc="Attaching questions",
     ):
@@ -262,13 +297,43 @@ def augment_cache_with_questions(args: argparse.Namespace) -> None:
             else:
                 dropped_missing += 1
             continue
+        if args.label_column and label_value is None:
+            dropped_label_missing += 1
+            continue
         if (not args.force) and ("question_embedding" in sample):
             kept_embeddings.append(sample)
             continue
         sample["question_embedding"] = text_cache[question_text].clone()
         sample["question_text"] = question_text
+        if args.label_column:
+            sample["label_text"] = label_value
+            final_label_values.append(label_value)
         kept_embeddings.append(sample)
         updated += 1
+
+    if args.label_column:
+        for sample, label_value in zip(kept_embeddings, sample_labels):
+            if sample.get("question_text") is None:
+                continue
+            if label_value is None:
+                dropped_label_missing += 1
+                sample["label_text"] = None
+                continue
+            sample["label_text"] = label_value
+            kept_labels.append(label_value)
+
+    if args.label_column and dropped_label_missing:
+        print(f"[WARN] {cache_path}: dropped {dropped_label_missing} samples with missing labels.")
+
+    final_payload = payload
+    if args.label_column:
+        if not final_label_values:
+            raise ValueError("No labels available after processing. Check --label_column")
+        label_ids, label_vocab = _encode_labels(final_label_values)
+        if final_payload is None:
+            final_payload = {}
+        final_payload["labels"] = label_ids
+        final_payload["label_vocab"] = label_vocab
 
     output_path: Path
     if args.inplace:
@@ -282,11 +347,12 @@ def augment_cache_with_questions(args: argparse.Namespace) -> None:
     if not args.inplace and output_path != cache_path:
         output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    _save_cache(output_path, kept_embeddings if not args.keep_missing else embeddings, payload)
+    _save_cache(output_path, kept_embeddings, final_payload)
 
     print(
         f"[DONE] {cache_path} -> {output_path}: updated {updated} / {total} samples, "
-        f"dropped {dropped_missing if not args.keep_missing else 0} missing"
+        f"dropped {dropped_missing if not args.keep_missing else 0} missing, "
+        f"dropped_labels {dropped_label_missing if args.label_column else 0}"
     )
 
 
@@ -296,6 +362,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--qa_file", required=True, help="CSV/JSON file with questions")
     parser.add_argument("--doc_column", default="doc_path", help="Column in QA file for document path")
     parser.add_argument("--question_column", default="question", help="Column with question text")
+    parser.add_argument("--label_column", default=None, help="Column with label/answer text")
     parser.add_argument("--split_column", default=None, help="Optional column for split filtering")
     parser.add_argument("--splits", nargs="*", default=None, help="Splits to keep (e.g., train val)")
     parser.add_argument("--doc_key", default="doc_path", help="Key inside cache samples that stores doc id")
