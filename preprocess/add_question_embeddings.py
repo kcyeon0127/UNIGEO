@@ -311,17 +311,6 @@ def augment_cache_with_questions(args: argparse.Namespace) -> None:
         kept_embeddings.append(sample)
         updated += 1
 
-    if args.label_column:
-        for sample, label_value in zip(kept_embeddings, sample_labels):
-            if sample.get("question_text") is None:
-                continue
-            if label_value is None:
-                dropped_label_missing += 1
-                sample["label_text"] = None
-                continue
-            sample["label_text"] = label_value
-            kept_labels.append(label_value)
-
     if args.label_column and dropped_label_missing:
         print(f"[WARN] {cache_path}: dropped {dropped_label_missing} samples with missing labels.")
 
