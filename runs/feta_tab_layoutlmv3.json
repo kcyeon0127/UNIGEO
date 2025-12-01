@@ -1,0 +1,467 @@
+{
+  "model": "rubentito/layoutlmv3-base-mpdocvqa",
+  "results": [
+    {
+      "doc": "Derek Theler.pdf",
+      "page": 2,
+      "question": "What part did Derek Theler play in the movie How Sarah Got Her Wings?",
+      "prediction": "Jordan",
+      "answer": "Derek Theler starred as Jordan in How Sarah Got Her Wings, which was released in 2015."
+    },
+    {
+      "doc": "Femina Miss India.pdf",
+      "page": 27,
+      "question": "What did Srishti Rana achieve in 2013?",
+      "prediction": "International 2006",
+      "answer": "Srishti Rana was crowned as Miss Asia Pacific World 2013."
+    },
+    {
+      "doc": "Paraguay at the FIFA World Cup.pdf",
+      "page": 3,
+      "question": "How did Paraguay do at the 1996 World Cup at the group stage?",
+      "prediction": "Round of 16",
+      "answer": "In first round matches, Paraguay defeated Iraq (1–0, goal Romerito) and then tied Mexico (1–1, goal Romerito) and Belgium (2–2, both goals Roberto Cabañas)."
+    },
+    {
+      "doc": "Arthur (TV series).pdf",
+      "page": 9,
+      "question": "Which Arthur season sets were released in Region 1?",
+      "prediction": "WGBH Home Video",
+      "answer": "WGBH Home Video released two Region 1 Arthur season sets; they released Season 10 on March 25, 2008 and Season 11 on September 2, 2008."
+    },
+    {
+      "doc": "List of highest-grossing Indian films in overseas markets.pdf",
+      "page": 3,
+      "question": "How successful were the films Aan and Awaara?",
+      "prediction": "Kabir Khan Films",
+      "answer": "Aan was the highest-gross Indian film overseas at the time, until it was surpassed by Awaara (1951) released in 1954."
+    },
+    {
+      "doc": "List of Chief Ministers of Andhra Pradesh.pdf",
+      "page": 4,
+      "question": "Who started their term as Chief Minister in 1995, and what party did he belong to?",
+      "prediction": "Map",
+      "answer": "After 1995, the Telugu Desam Party was headed by N. Chandrababu Naidu.."
+    },
+    {
+      "doc": "Christa B. Allen.pdf",
+      "page": 2,
+      "question": "Which role did Christa B. Allen play in 2015 alone?",
+      "prediction": "Young Jenna Rink",
+      "answer": "In 2015, Christa B. Allen had a recurring role as Robyn in Baby Daddy."
+    },
+    {
+      "doc": "Geography of Japan.pdf",
+      "page": 4,
+      "question": "What are the undisputed latitude and longitude ranges of Japan?",
+      "prediction": "367 kilometers",
+      "answer": "Japan extends from 20° to 45° north longitude (Okinotorishima to Benten-jima) and from 122° to 153° east latitude (Yonaguni to Minami Torishima)."
+    },
+    {
+      "doc": "Total Drama All-Stars and Pahkitew Island.pdf",
+      "page": 6,
+      "question": "When did season 5 of the Total Drama All-Stars and Pahkitew Island's premiere in the United States on the Carton Network?",
+      "prediction": "season 5",
+      "answer": "The Total Drama All-Stars and Pahkitew Island's season first premiered in the United States starting on September 10, 2013 on Cartoon Network with the first part, while the second part premiered in the United States on July 7, 2014."
+    },
+    {
+      "doc": "Total Drama All-Stars and Pahkitew Island.pdf",
+      "page": 1,
+      "question": "When did Cartoon Network air Total Drama All-Stars and Teletoon?",
+      "prediction": "October 2012",
+      "answer": "Cartoon Network aired the entire season starting on September 10, 2013 in the United States, with Teletoon airing the season later on January 9, 2014."
+    },
+    {
+      "doc": "Victoria Hamilton.pdf",
+      "page": 3,
+      "question": "Victoria Hamilton played the role of Queen Victoria in which 2001 film?",
+      "prediction": "The drama series",
+      "answer": "Hamilton played the role of Queen Victoria in 2001 in \"Victoria & Albert.\""
+    },
+    {
+      "doc": "Victoria Hamilton.pdf",
+      "page": 3,
+      "question": "Which role did Victoria Hamilton portray in the 2001 film Victoria & Albert?",
+      "prediction": "Doctor Foster, playing a character named Anna, a lady who lived across the road from Gemma & Simon Foster, played by Suranne Jones and Bertie Carvel. In 2016, she appeared in the Netflix series The Crown as Queen Elizabeth The Queen Mother. The drama series, which is scheduled to span over six seasons, depicts the relationship",
+      "answer": "In 2001, Victoria Hamilton appeared in a television role as Queen Victoria in Victoria & Albert."
+    },
+    {
+      "doc": "Victoria Hamilton.pdf",
+      "page": 1,
+      "question": "What films was Victoria Hamilton in during 1995 and 1999?",
+      "prediction": "English actress",
+      "answer": "Victoria Hamilton acted in the 1995 film Pride and Prejudice as Mrs Forster, the 1995 film Persuasion as Henrietta Musgrove, and the 1999 film Mansfield Park as Maria Bertram."
+    },
+    {
+      "doc": "List of earthquakes in South Africa.pdf",
+      "page": 2,
+      "question": "What's the biggest earthquake in South Africa since the 1969 Tulbagh earthquake?",
+      "prediction": "6.3",
+      "answer": "The shock was assigned a magnitude of 5.5 on the Richter scale by the Council for Geoscience (CGS) in South Africa, making it the biggest earthquake in South Africa since the 1969 Tulbagh earthquake, which had a magnitude of 6.3 on the Richter scale."
+    },
+    {
+      "doc": "Dylan Minnette.pdf",
+      "page": 5,
+      "question": "What did Dylan Minnette play in 2010?",
+      "prediction": "IMDb",
+      "answer": "In 2010, Dylan Minnette played as Kenny in the film Let Me In."
+    },
+    {
+      "doc": "Amy Jackson.pdf",
+      "page": 5,
+      "question": "Which actress appeared in the 2012 film Thaandavam playing the character Sarah Vinayagam?",
+      "prediction": "Tamil",
+      "answer": "Amy Jackson appeared in Thaandavam (2012)."
+    },
+    {
+      "doc": "List of Formula One driver records.pdf",
+      "page": 53,
+      "question": "What was the most recent year Rosberg won the Grand Slam, and how many times has he done that?",
+      "prediction": "times",
+      "answer": "The 2016 European Grand Prix marked Rosberg's second career Grand Slam."
+    },
+    {
+      "doc": "Mazda BT-50.pdf",
+      "page": 3,
+      "question": "What two engine options did Mazda BT50 update the Ford Everest with and what were the engine specs?",
+      "prediction": "Diesel engines",
+      "answer": "Mazda BT-50 facelifted the Ford Everest with either a 2.5-liter turbodiesel with 143 PS (105 kW; 141 hp) or a 3.0-liter diesel with 156 PS (115 kW; 154 hp)."
+    },
+    {
+      "doc": "Joseph and the Amazing Technicolor Dreamcoat.pdf",
+      "page": 9,
+      "question": "What award was received by Jason Donova, Steven Pimlott and Anthony Van Laast in 1992?",
+      "prediction": "Best Director of a Musical Steven Pimlott Nominated Best Theatre Choreographer Anthony Van Laast Nominated",
+      "answer": "At the 1991 London revival, the Laurence Olivier Award was received by Jason Donovan, Steven Pimlott, and Anthony Van Laast in 1992."
+    },
+    {
+      "doc": "List of Chief Ministers of Kerala.pdf",
+      "page": 5,
+      "question": "Who was E. M. S. Namboodiripad and what was his political career? ",
+      "prediction": "E. K. Nayanar",
+      "answer": "E. M. S. Namboodiripad was an Indian communist politician, who served as the first Chief Minister of Kerala state in 1957–59 and then again in 1967–69."
+    },
+    {
+      "doc": "List of Chief Ministers of Kerala.pdf",
+      "page": 1,
+      "question": "How many times did K. Karunakaran serve as the Chief Minister of Kerala, and what were the dates of each tenure?",
+      "prediction": "1",
+      "answer": "K. Karunakaran served as the Chief Minister of Kerala four times: for a brief period from March 1977 to April 1977, another short term from December 1981 to March 1982, followed by a brief period of president's rule from May 1982 to March 1987, and from June to March 1995."
+    },
+    {
+      "doc": "Vivien Leigh.pdf",
+      "page": 13,
+      "question": "What did Vivien Leigh win two academy awards for in 1939 and 1951?",
+      "prediction": "\"1939 Awards.\" (http://www.nyfcc.com/awards/?awardyear=1939)",
+      "answer": "Vivien Leigh won two Academy Awards for Best Actress, for her performances in, Gone with the Wind (1939) and in the film of, A Streetcar Named Desire (1951)."
+    },
+    {
+      "doc": "Vivien Leigh.pdf",
+      "page": 2,
+      "question": "What awards did Leigh's role in A Streetcar Named Desire win her in 1951 at the academy awards, BAFTA and NY Film Critics circle awards??",
+      "prediction": "B",
+      "answer": "Leigh's performance in A Streetcar Named Desire won Academy Award for Best Actress, a British Academy of Film and Television Arts (BAFTA) Award for Best British Actress, and a New York Film Critics Circle Award for Best Actress."
+    },
+    {
+      "doc": "2018 Indianapolis 500.pdf",
+      "page": 7,
+      "question": "What driver had the fastest speed at the 2018 Indianapolis 500, what was that speed, and who were the two drivers behind that speed?",
+      "prediction": "Robert Wickens (SPM). Three drivers were schedule to take refresher tests: Jay Howard (SPM), Sage Karam (D&R), and Danica Patrick (Carpenter). The rookie test consisted of three phases. Phase 1 was ten laps at 205 mph, Phase 2 was ten laps at 210 mph, and Phase 3 was ten laps at 215 mph. During the three-hour morning session (10:00 a.m. to 1:00 p.m.), Kaiser, Leist, and Wickens passed all three phases of the rookie test.[30] Pietro Fittipaldi, however, did not participate due to commitments at the 6 Hours of Spa, opting instead to partake in rookie orientation later in the month. Three days later, however, Fittipaldi withdrew after suffering injuries in a crash at Robert Wickens",
+      "answer": "Tony Kanaan set a speed of 226.680 mph, ahead of Ed Carpenter and Gabby Chaves."
+    },
+    {
+      "doc": "2018 Indianapolis 500.pdf",
+      "page": 9,
+      "question": "What record did Sage Karam set, when, and whom did he beat to do so?",
+      "prediction": "James Davison",
+      "answer": "On Monday May 21, Sage Karam set the fastest speed at 226.461 mph, besting Tony Kanaan and Ryan Hunter-Reay."
+    },
+    {
+      "doc": "Jonathan Jackson (actor).pdf",
+      "page": 4,
+      "question": "In what film did Jonathan Jackson play Jesse Tuck, and what year did that film come out?",
+      "prediction": "2002",
+      "answer": "In 2002, Jonathan Jackson played as Jesse Tuck in the film Tuck Everlasting."
+    },
+    {
+      "doc": "Courteney Cox.pdf",
+      "page": 9,
+      "question": "What role did Courteney Cox play in the Scream series?",
+      "prediction": "as Monica Geller",
+      "answer": "Cox appeared as Gale Weathers in the films Scream (1996), Scream 2 (1997), and Scream 3 (2000)."
+    },
+    {
+      "doc": "Akkadian Empire.pdf",
+      "page": 17,
+      "question": "In the Akkadian Empire, Rimush was succeeded by who?",
+      "prediction": "Oates, Joan",
+      "answer": "Rimush was succeeded by Manishtushu (2269–2255 BC)."
+    },
+    {
+      "doc": "Kathryn Beaumont.pdf",
+      "page": 2,
+      "question": "What did Kathryn Beaumont star in 1953?",
+      "prediction": "at the TCM Movie Database",
+      "answer": "Kathryn Beaumont starred in the voice role of Wendy Darling in Peter Pan (1953)."
+    },
+    {
+      "doc": "Grade inflation.pdf",
+      "page": 12,
+      "question": "How did the proportion of second class honors awarded change between 1995 and 2011?",
+      "prediction": "40.42",
+      "answer": "Between 1995 and 2011, the grade inflation proportion of upper second class awarded for first degree courses increased from 40.42% to 48.38%, whilst lower second class honours dropped from 34.97% to 28.9%."
+    },
+    {
+      "doc": "Long Day's Journey into Night.pdf",
+      "page": 9,
+      "question": "For which work did Eugene O'Neill win the Pulitzer Prize for Drama in 1957?",
+      "prediction": "New York Drama Critics' Best American Play Eugene O'Neill Won Circle Award",
+      "answer": "O'Neill received the 1957 Pulitzer Prize for Drama for his work in Long Day's Journey into Night."
+    },
+    {
+      "doc": "June Marlowe.pdf",
+      "page": 4,
+      "question": "In what role did the actress not play Miss Crabtree",
+      "prediction": "Mary Moore",
+      "answer": "Marlowe acted as Miss Crabtree in Shiver My Timbers in 1931 and in Readin' and Writin' in 1932."
+    },
+    {
+      "doc": "Reba (TV series).pdf",
+      "page": 11,
+      "question": "What were the start and end dates of Reba on the WB and the CW?",
+      "prediction": "end dates of Reba on the WB and the CW? Template:Tv.com show Official website (http://www.mylifetime.com/on-tv/shows/reba) from Lifetime Television The show Reba, The Cast, And Trivia! (http://www.endedtvseries.com/reba/) TV Series Finale (http://www.tvseriesfinale.com/2007/01/reba_is_the_sitcom_cancelled_for_sure. html) – details of cancellation and possible spin-off",
+      "answer": "Reba was aired on The WB from October 5, 2001, to May 5, 2006, and on The CW from November 19, 2006, to February 18, 2007."
+    },
+    {
+      "doc": "We Are Never Ever Getting Back Together.pdf",
+      "page": 27,
+      "question": "Did We Are Never Ever Getting Back Together receive any Grammy Awards?",
+      "prediction": "\"",
+      "answer": "We Are Never Ever Getting Back Together received a Grammy nomination for Record of the Year at the 2013 Grammy Awards."
+    },
+    {
+      "doc": "Rob Beckett.pdf",
+      "page": 2,
+      "question": "What award was Beckett presented with in 2018 and by which bbc show?",
+      "prediction": "Wedding Day Winners, with Lorraine Kelly[12] and All Together Now with Geri Horner, both Saturday-night entertainment series for BBC One.[13] Filmography Year Title Role Channel Notes 2012– I'm a Celebrity...Get Me Out of 3 series; with Joe Swash and Laura Co-presenter ITV2 2014 Here! NOW! Whitmore Celebs Go Dating Narrator E4 4 series 2016— 8 Out of 10 Cats Team captain More4 2 series Comic Relief Co-presenter Guest 2017 The One Show 1 episode presenter BBC One Comedy Playhouse: Static Rob 1 episode Wedding Day Winners",
+      "answer": "In 2018, Rob Beckett presented Wedding Day Winners with Lorraine Kelly and All Together Now for BBC One."
+    },
+    {
+      "doc": "Stadium Australia.pdf",
+      "page": 15,
+      "question": "How many seats were sold at the 2000 Summer Olympics?",
+      "prediction": "sold",
+      "answer": "The opening ceremony for the 2000 Summer Olympics at the stadium sold out 110,000 seats, while the highest attendance for was recorded with 114,714 at the stadium for the closing ceremony of the same Games."
+    },
+    {
+      "doc": "Dennis Hopper.pdf",
+      "page": 9,
+      "question": "What award was Dennis Hopper nominated for in 1986?",
+      "prediction": "Archive",
+      "answer": "In 1986, Dennis Hopper acclaimed for Blue Velvet and Hoosiers and nominated for the Academy Award for Best Supporting Actor."
+    },
+    {
+      "doc": "Coins of the United States dollar.pdf",
+      "page": 3,
+      "question": "Which circulated United States coins were issued in the copper 91.67% nickel 8.33% composition?",
+      "prediction": "\"steel pennies\"",
+      "answer": "The Quarter-Dollar, Half-Dollar, and Dollar coins of United States were issued in the copper 91.67% nickel 8.33% composition for circulation."
+    },
+    {
+      "doc": "Oklahoma.pdf",
+      "page": 20,
+      "question": "Does Oklahoma have any indoor football teams?",
+      "prediction": "Oklahoma City and Tulsa, Oklahoma City is the state's capital and 5. Lawton 98,376 and 65 percent of largest city. Oklahomans live within 6. Edmond 84,885 their metropolitan areas, or 7. Moore 57,810 spheres of economic and social influence defined by the United States Census Bureau as a metropolitan statistical area. Oklahoma City, the 8. Midwest City 56,080 state's capital and largest city, had the largest metropolitan area in the 9. Enid 49,854 state in 2010, with 1,252,987 people, and the metropolitan area of Tulsa had 937,478 residents.[256] Between 2000 and 2010, the cities that led 10. Stillwater 46,560 the state in population growth were Blanchard (172.4%), Elgin 11. Muskogee 38,981 (78.2%), Jenks (77.0%), Piedmont (56.7%), Bixby (56.6%), and Owasso (56.3%).[255] 12. Bartlesville 36,245 In descending order of population, Oklahoma's largest cities in 2010 were: Oklahoma City (579,999, +14.6%), Tulsa (391,906, −0.3%), Norman (110,925, +15.9%), Broken Arrow",
+      "answer": "The Oklahoma Defenders are an indoor football team that plays in the CPIFL in Tulsa."
+    },
+    {
+      "doc": "List of best-selling albums in the United States.pdf",
+      "page": 4,
+      "question": "Does any artist have multiple albums with more than 20 million copies sold?",
+      "prediction": "Santana Supernatural Arista",
+      "answer": "The Eagles albums Their Greatest Hits (1971-1975) and Hotel California both sold more than 20 million copies with sales of 38 million and 26 million copies, respectively."
+    },
+    {
+      "doc": "List of best-selling albums in the United States.pdf",
+      "page": 5,
+      "question": "What was the best-selling album in the U.S. before Michael Jackson's Thriller, and for how long did it hold this record?",
+      "prediction": "Ten",
+      "answer": "Their Greatest Hits was the best-selling album in the United States, and it stayed the best-selling album in the U.S. for some years (1971–1975), until it was surpassed by Michael Jackson's Thriller."
+    },
+    {
+      "doc": "List of best-selling albums in the United States.pdf",
+      "page": 3,
+      "question": "How did the Boston album perform in terms of sales?",
+      "prediction": "17,000,000",
+      "answer": "The Boston album is the best-selling album in the United States, selling 17,000,000 shipments."
+    },
+    {
+      "doc": "AirPort Time Capsule.pdf",
+      "page": 4,
+      "question": "What are the wifi capabilities of the AirPort Time Capsule?",
+      "prediction": "Single-band operation",
+      "answer": "802.11ac was supported in the 5th generation of the AirPort Time Capsule."
+    },
+    {
+      "doc": "AirPort Time Capsule.pdf",
+      "page": 4,
+      "question": "What is are the networking features of the fifth-generation Time Capsule?",
+      "prediction": "Yes",
+      "answer": "The fifth-generation Time Capsule includes an 802.11ac and dual-band operation."
+    },
+    {
+      "doc": "The Adventures of Tintin.pdf",
+      "page": 19,
+      "question": "What are some albums in the The Adventures of Tintin?",
+      "prediction": "comic albums",
+      "answer": "The Crab with the Golden Claws (1941), The Secret of the Unicorn (1943) and Red Rackham's Treasure (1944) are albums of The Adventures of Tintin."
+    },
+    {
+      "doc": "List of tallest buildings in India.pdf",
+      "page": 9,
+      "question": "What happened in 1961?",
+      "prediction": "Kohinoor Square",
+      "answer": "The LIC Building was the tallest building in India in 1959 and was surpassed by Mumbai's first skyscraper, the Usha Kiran Building, in 1961, which is 80 m high."
+    },
+    {
+      "doc": "List of longest films.pdf",
+      "page": 2,
+      "question": "What films are eight hours long?",
+      "prediction": "Experimental films",
+      "answer": "\"Baa Baa Land''s length of eight hours has it the nineteenth-longest film, the same length as 1967's film \"The Imitation of Christ\" and 2013's \"sleep.\""
+    },
+    {
+      "doc": "Crosby, Stills & Nash (album).pdf",
+      "page": 4,
+      "question": "How far up the Top 100 Chart did the 2 singles from the album Crosby, Stills & Nash travel before they peaked?",
+      "prediction": "3",
+      "answer": "The album Crosby, Stills & Nash\"'s two singles, \"Marrakesh Express\" and \"Suite: Judy Blue Eyes,\" peaked respectively at #28 and at #21 in 1969 on the Billboard Hot 100 singles chart."
+    },
+    {
+      "doc": "List of Guardians of the Galaxy members.pdf",
+      "page": 3,
+      "question": "What character is named after the city where all movies are made, and what movie did it join in?",
+      "prediction": "Lord Pryde",
+      "answer": "Hollywood joins the Galactic Guardians in the Guardians of the Galaxy."
+    },
+    {
+      "doc": "Freddy Fender.pdf",
+      "page": 9,
+      "question": "During what year was Freddy Fender's singles  \"Before the Next Teardrop Falls\" and \"Wasted Days and Wasted Nights\" released in?",
+      "prediction": "During what year was Freddy Fender's singles  \"Before the Next Teardrop Falls\" and \"Wasted Days and Wasted Nights\" released in? Retrieved from \"https://en.wikipedia.org/w/index.php?title=Freddy_Fender&oldid=813882000\"",
+      "answer": "Freddy Fender's singles \"Before the Next Teardrop Falls\" and \"Wasted Days and Wasted Nights\" released in 1975."
+    },
+    {
+      "doc": "2018 Chicago Bears season.pdf",
+      "page": 3,
+      "question": "Which players signed with new teams on March 15?",
+      "prediction": "Christian Jones",
+      "answer": "On March 15, Christian Jones and kicker Cairo Santos signed with the Detroit Lions and New York Jets, respectively."
+    },
+    {
+      "doc": "Jon Bon Jovi.pdf",
+      "page": 6,
+      "question": "What is the acting history of Jon Bon Jovi between the years 1995 to 2011 but not including the year 2000 ?",
+      "prediction": "no longer part owner of the Soul.[37] In 2011, Bon Jovi expressed interest in purchasing 15%",
+      "answer": "Jon Bon Jovi is an actor in the movies Moonlight and Valentino, The Leading Man, Destination Anywhere, Homegrown, Little City, No Looking Back, Row Your Boat, Vampires Los Muertos, U-571, Cry Wolf, National Lampoon's Pucked, and New Year's Eve."
+    },
+    {
+      "doc": "Ann B. Davis.pdf",
+      "page": 4,
+      "question": "Ann B. Davis which role in which shows in 1981 and 1990?",
+      "prediction": "The Bradys",
+      "answer": "Ann B. Davis reprised her role as Alice Nelson in two short-lived television series: The Brady Brides (1981) and The Bradys (1990), one of which lasted six episodes."
+    },
+    {
+      "doc": "Mercury Grand Marquis.pdf",
+      "page": 10,
+      "question": "What was the horsepower of the Ford Modular V8 in 2001?",
+      "prediction": "221 hp (224 PS)",
+      "answer": "In 2001, the Ford Modular V8 had 220 and 235 hp of output."
+    },
+    {
+      "doc": "Koenigsegg Agera.pdf",
+      "page": 4,
+      "question": "How much power and torque does the Agera R engine make?",
+      "prediction": "1.39 kg",
+      "answer": "Agera R's twin-turbo V8 engine have a power output of 1,140 PS (1,124 hp; 838 kW) and 1,200 N⋅m (885 lb⋅ft) of torque at 4,100 rpm."
+    },
+    {
+      "doc": "Koenigsegg Agera.pdf",
+      "page": 4,
+      "question": "What is the description of the Agera?",
+      "prediction": "power-to-weight ratio of 1.39 kg (3.06 lb) per horsepower",
+      "answer": "The Agera is powered by a 5.0-litre V8 twin-turbo engine which generates a maximum power output of 960 PS (947 hp; 706 kW) at 6,900 rpm and 1,100 N⋅m (811 lbf⋅ft) of torque at 4,000 rpm."
+    },
+    {
+      "doc": "Koenigsegg Agera.pdf",
+      "page": 4,
+      "question": "How much power does the Agera’s V8 engine make?",
+      "prediction": "1.39 kg",
+      "answer": "The 5.0-litre V8 engine has a power of 1,176 PS (865 kW; 1,160 hp)."
+    },
+    {
+      "doc": "Koenigsegg Agera.pdf",
+      "page": 4,
+      "question": "What are the power output and torque on the Koenigsegg Agera Final?",
+      "prediction": "1.39 kg (3.06 lb) per horsepower",
+      "answer": "The Koenigsegg Agera Final generates a power output of 1,360 PS (1,000 kW; 1,341 hp) at 7,500 and 1,371 N⋅m (1,011 lb⋅ft) of torque at 6,000."
+    },
+    {
+      "doc": "Jennifer Hudson.pdf",
+      "page": 17,
+      "question": "Which role did Jennifer Hudson play in the television special Hairspray Live! in 2016?",
+      "prediction": "Eng",
+      "answer": "In 2016, Hudson played Motormouth Maybelle in Hairspray Live!."
+    },
+    {
+      "doc": "Michael Bublé discography.pdf",
+      "page": 4,
+      "question": "What album performed the worst?",
+      "prediction": "Extended plays",
+      "answer": "Michael Bublé's album Come Fly with Me did not chart on the CAN, AUT, GER, and SWI charts."
+    },
+    {
+      "doc": "1986 FIFA World Cup.pdf",
+      "page": 6,
+      "question": "How did Mexico play against Belgium, Iraq and Paraguay?",
+      "prediction": "0–0",
+      "answer": "Mexico beat Belgium with 2–1, Iraq by 1–0, and scored 1–1 with Paraguay."
+    },
+    {
+      "doc": "Tom Hughes (actor).pdf",
+      "page": 1,
+      "question": "In which 2010 films did Tom Hughes appear firstly as Chaz Jank and then as Bruce Pearson?",
+      "prediction": "Cemetery Junction,[3][4]",
+      "answer": "In 2010, Tom Hughes appeared in Sex & Drugs & Rock & Roll as Chaz Jankel and as Bruce Pearson in Cemetery Junction."
+    },
+    {
+      "doc": "Tom Hughes (actor).pdf",
+      "page": 2,
+      "question": "What two films did Tom Hughes appear in during 2011, and what role did he play in the second film?",
+      "prediction": "Nick Slade",
+      "answer": "In 2011, Tom Hughes appeared in Silk as Nick Slade and in Page Eight."
+    },
+    {
+      "doc": "Jacob Rees-Mogg.pdf",
+      "page": 32,
+      "question": "How did Rees-Mogg do in the election?",
+      "prediction": "at IMDb",
+      "answer": "Rees-Mogg won with a majority of 4,914 votes."
+    },
+    {
+      "doc": "Deuterocanonical books.pdf",
+      "page": 19,
+      "question": "What dod Psalm 151 and Tobit books have in common?",
+      "prediction": "151 and Tobit books",
+      "answer": "Psalm 151 and Tobit are deuterocanonical books."
+    },
+    {
+      "doc": "Lionel Messi.pdf",
+      "page": 4,
+      "question": "Which season did Lionel Messi achieve the highest scores and how many was that?",
+      "prediction": "2003–04",
+      "answer": "During the 2011–12 season, Lionel Messi of Barcelona in the La Liga scored 73 goals, which is the highest goal he achieved for a season."
+    }
+  ]
+}

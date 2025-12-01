@@ -1,0 +1,1114 @@
+{
+  "results": [
+    {
+      "doc": "Derek Theler.pdf",
+      "question": "What part did Derek Theler play in the movie How Sarah Got Her Wings?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What part did Derek Theler play in the movie How Sarah Got Her Wings?\nAnswer:\nassistant\nJordan",
+      "answer": "Derek Theler starred as Jordan in How Sarah Got Her Wings, which was released in 2015.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Derek Theler.pdf",
+          "page": 2,
+          "matched": false,
+          "score": 0.02545743834526651
+        }
+      ]
+    },
+    {
+      "doc": "Femina Miss India.pdf",
+      "question": "What did Srishti Rana achieve in 2013?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What did Srishti Rana achieve in 2013?\nAnswer:\nassistant\nSrishti Rana was crowned Femina Miss India International in 2013.",
+      "answer": "Srishti Rana was crowned as Miss Asia Pacific World 2013.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Femina Miss India.pdf",
+          "page": 27,
+          "matched": false,
+          "score": 0.10526315789473684
+        }
+      ]
+    },
+    {
+      "doc": "Paraguay at the FIFA World Cup.pdf",
+      "question": "How did Paraguay do at the 1996 World Cup at the group stage?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: How did Paraguay do at the 1996 World Cup at the group stage?\nAnswer:\nassistant\nD",
+      "answer": "In first round matches, Paraguay defeated Iraq (1–0, goal Romerito) and then tied Mexico (1–1, goal Romerito) and Belgium (2–2, both goals Roberto Cabañas).",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Paraguay at the FIFA World Cup.pdf",
+          "page": 3,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "Arthur (TV series).pdf",
+      "question": "Which Arthur season sets were released in Region 1?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Which Arthur season sets were released in Region 1?\nAnswer:\nassistant\nThe first and second seasons of Arthur were released in Region 1.",
+      "answer": "WGBH Home Video released two Region 1 Arthur season sets; they released Season 10 on March 25, 2008 and Season 11 on September 2, 2008.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Courteney Cox.pdf",
+          "page": 9,
+          "matched": false,
+          "score": 0.03290676416819013
+        }
+      ]
+    },
+    {
+      "doc": "List of highest-grossing Indian films in overseas markets.pdf",
+      "question": "How successful were the films Aan and Awaara?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: How successful were the films Aan and Awaara?\nAnswer:\nassistant\nThe films Aan and Awaara were not included in the list.",
+      "answer": "Aan was the highest-gross Indian film overseas at the time, until it was surpassed by Awaara (1951) released in 1954.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of highest-grossing Indian films in overseas markets.pdf",
+          "page": 3,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "List of Chief Ministers of Andhra Pradesh.pdf",
+      "question": "Who started their term as Chief Minister in 1995, and what party did he belong to?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Who started their term as Chief Minister in 1995, and what party did he belong to?\nAnswer:\nassistant\nN. Chandrababu Naidu started his term as Chief Minister in 1995, and he belonged to the Indian National Congress party.",
+      "answer": "After 1995, the Telugu Desam Party was headed by N. Chandrababu Naidu..",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of Chief Ministers of Andhra Pradesh.pdf",
+          "page": 4,
+          "matched": false,
+          "score": 0.2958579881656805
+        }
+      ]
+    },
+    {
+      "doc": "Christa B. Allen.pdf",
+      "question": "Which role did Christa B. Allen play in 2015 alone?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Which role did Christa B. Allen play in 2015 alone?\nAnswer:\nassistant\nRobyn",
+      "answer": "In 2015, Christa B. Allen had a recurring role as Robyn in Baby Daddy.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Christa B. Allen.pdf",
+          "page": 2,
+          "matched": false,
+          "score": 0.059186189889025895
+        }
+      ]
+    },
+    {
+      "doc": "Geography of Japan.pdf",
+      "question": "What are the undisputed latitude and longitude ranges of Japan?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What are the undisputed latitude and longitude ranges of Japan?\nAnswer:\nassistant\nThe undisputed latitude and longitude ranges of Japan are 30° N to 45° N and 130° E to 150° E.",
+      "answer": "Japan extends from 20° to 45° north longitude (Okinotorishima to Benten-jima) and from 122° to 153° east latitude (Yonaguni to Minami Torishima).",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of Chief Ministers of Andhra Pradesh.pdf",
+          "page": 4,
+          "matched": false,
+          "score": 0.2903225806451613
+        }
+      ]
+    },
+    {
+      "doc": "Total Drama All-Stars and Pahkitew Island.pdf",
+      "question": "When did season 5 of the Total Drama All-Stars and Pahkitew Island's premiere in the United States on the Carton Network?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: When did season 5 of the Total Drama All-Stars and Pahkitew Island's premiere in the United States on the Carton Network?\nAnswer:\nassistant\nSeason 5 of the Total Drama All-Stars and Pahkitew Island premiered on the Cartoon Network in the United States on June 25, 2010.",
+      "answer": "The Total Drama All-Stars and Pahkitew Island's season first premiered in the United States starting on September 10, 2013 on Cartoon Network with the first part, while the second part premiered in the United States on July 7, 2014.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "AirPort Time Capsule.pdf",
+          "page": 6,
+          "matched": false,
+          "score": 0.20512820512820512
+        }
+      ]
+    },
+    {
+      "doc": "Total Drama All-Stars and Pahkitew Island.pdf",
+      "question": "When did Cartoon Network air Total Drama All-Stars and Teletoon?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: When did Cartoon Network air Total Drama All-Stars and Teletoon?\nAnswer:\nassistant\nTotal Drama All-Stars and Teletoon aired on Cartoon Network in 2007.",
+      "answer": "Cartoon Network aired the entire season starting on September 10, 2013 in the United States, with Teletoon airing the season later on January 9, 2014.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of longest films.pdf",
+          "page": 1,
+          "matched": false,
+          "score": 0.05005213764337852
+        }
+      ]
+    },
+    {
+      "doc": "Victoria Hamilton.pdf",
+      "question": "Victoria Hamilton played the role of Queen Victoria in which 2001 film?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Victoria Hamilton played the role of Queen Victoria in which 2001 film?\nAnswer:\nassistant\nVictoria",
+      "answer": "Hamilton played the role of Queen Victoria in 2001 in \"Victoria & Albert.\"",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Victoria Hamilton.pdf",
+          "page": 3,
+          "matched": false,
+          "score": 0.046193327630453376
+        }
+      ]
+    },
+    {
+      "doc": "Victoria Hamilton.pdf",
+      "question": "Which role did Victoria Hamilton portray in the 2001 film Victoria & Albert?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Which role did Victoria Hamilton portray in the 2001 film Victoria & Albert?\nAnswer:\nassistant\nVictoria Hamilton portrayed the role of Queen Victoria in the 2001 film Victoria & Albert.",
+      "answer": "In 2001, Victoria Hamilton appeared in a television role as Queen Victoria in Victoria & Albert.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Victoria Hamilton.pdf",
+          "page": 3,
+          "matched": false,
+          "score": 0.046193327630453376
+        }
+      ]
+    },
+    {
+      "doc": "Victoria Hamilton.pdf",
+      "question": "What films was Victoria Hamilton in during 1995 and 1999?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What films was Victoria Hamilton in during 1995 and 1999?\nAnswer:\nassistant\nVictoria Hamilton was in the 1995 film \"Persuasion\" and the 1999 film \"Mansfield Park\".",
+      "answer": "Victoria Hamilton acted in the 1995 film Pride and Prejudice as Mrs Forster, the 1995 film Persuasion as Henrietta Musgrove, and the 1999 film Mansfield Park as Maria Bertram.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Victoria Hamilton.pdf",
+          "page": 1,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "List of earthquakes in South Africa.pdf",
+      "question": "What's the biggest earthquake in South Africa since the 1969 Tulbagh earthquake?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What's the biggest earthquake in South Africa since the 1969 Tulbagh earthquake?\nAnswer:\nassistant\nThe 1969 earthquake remains the most destructive earthquake in South African history.",
+      "answer": "The shock was assigned a magnitude of 5.5 on the Richter scale by the Council for Geoscience (CGS) in South Africa, making it the biggest earthquake in South Africa since the 1969 Tulbagh earthquake, which had a magnitude of 6.3 on the Richter scale.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of earthquakes in South Africa.pdf",
+          "page": 2,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "Dylan Minnette.pdf",
+      "question": "What did Dylan Minnette play in 2010?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What did Dylan Minnette play in 2010?\nAnswer:\nassistant\nDylan Minnette played the role of Clay in 13 Reasons Why in 2010.",
+      "answer": "In 2010, Dylan Minnette played as Kenny in the film Let Me In.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Dylan Minnette.pdf",
+          "page": 5,
+          "matched": false,
+          "score": 0.192090395480226
+        }
+      ]
+    },
+    {
+      "doc": "Amy Jackson.pdf",
+      "question": "Which actress appeared in the 2012 film Thaandavam playing the character Sarah Vinayagam?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Which actress appeared in the 2012 film Thaandavam playing the character Sarah Vinayagam?\nAnswer:\nassistant\nAmy Wilkinson",
+      "answer": "Amy Jackson appeared in Thaandavam (2012).",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Amy Jackson.pdf",
+          "page": 5,
+          "matched": false,
+          "score": 0.1111111111111111
+        }
+      ]
+    },
+    {
+      "doc": "List of Formula One driver records.pdf",
+      "question": "What was the most recent year Rosberg won the Grand Slam, and how many times has he done that?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What was the most recent year Rosberg won the Grand Slam, and how many times has he done that?\nAnswer:\nassistant\nRosberg won the Grand Slam in 2016, and he has done that once.",
+      "answer": "The 2016 European Grand Prix marked Rosberg's second career Grand Slam.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of Formula One driver records.pdf",
+          "page": 53,
+          "matched": false,
+          "score": 0.23577235772357724
+        }
+      ]
+    },
+    {
+      "doc": "Mazda BT-50.pdf",
+      "question": "What two engine options did Mazda BT50 update the Ford Everest with and what were the engine specs?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What two engine options did Mazda BT50 update the Ford Everest with and what were the engine specs?\nAnswer:\nassistant\nThe Ford Everest was updated with a 2.5-liter turbodiesel with 143 PS or a 3.0-liter turbodiesel with 156 PS.",
+      "answer": "Mazda BT-50 facelifted the Ford Everest with either a 2.5-liter turbodiesel with 143 PS (105 kW; 141 hp) or a 3.0-liter diesel with 156 PS (115 kW; 154 hp).",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Mazda BT-50.pdf",
+          "page": 3,
+          "matched": false,
+          "score": 0.02357100766057749
+        }
+      ]
+    },
+    {
+      "doc": "Joseph and the Amazing Technicolor Dreamcoat.pdf",
+      "question": "What award was received by Jason Donova, Steven Pimlott and Anthony Van Laast in 1992?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What award was received by Jason Donova, Steven Pimlott and Anthony Van Laast in 1992?\nAnswer:\nassistant\nLaurence Olivier Award",
+      "answer": "At the 1991 London revival, the Laurence Olivier Award was received by Jason Donovan, Steven Pimlott, and Anthony Van Laast in 1992.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Joseph and the Amazing Technicolor Dreamcoat.pdf",
+          "page": 9,
+          "matched": false,
+          "score": 0.03014318010550113
+        }
+      ]
+    },
+    {
+      "doc": "List of Chief Ministers of Kerala.pdf",
+      "question": "Who was E. M. S. Namboodiripad and what was his political career? ",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Who was E. M. S. Namboodiripad and what was his political career? \nAnswer:\nassistant\nE. M. S. Namboodiripad was a politician and the first Chief Minister of Kerala.",
+      "answer": "E. M. S. Namboodiripad was an Indian communist politician, who served as the first Chief Minister of Kerala state in 1957–59 and then again in 1967–69.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Dylan Minnette.pdf",
+          "page": 5,
+          "matched": false,
+          "score": 0.27358490566037735
+        }
+      ]
+    },
+    {
+      "doc": "List of Chief Ministers of Kerala.pdf",
+      "question": "How many times did K. Karunakaran serve as the Chief Minister of Kerala, and what were the dates of each tenure?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: How many times did K. Karunakaran serve as the Chief Minister of Kerala, and what were the dates of each tenure?\nAnswer:\nassistant\nK. Karunakaran served as the Chief Minister of Kerala four times, with the dates of each tenure being 1960-1962, 1962-1967, 1970-1971, and 1977-1980.",
+      "answer": "K. Karunakaran served as the Chief Minister of Kerala four times: for a brief period from March 1977 to April 1977, another short term from December 1981 to March 1982, followed by a brief period of president's rule from May 1982 to March 1987, and from June to March 1995.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of Chief Ministers of Kerala.pdf",
+          "page": 1,
+          "matched": false,
+          "score": 0.0582010582010582
+        }
+      ]
+    },
+    {
+      "doc": "Vivien Leigh.pdf",
+      "question": "What did Vivien Leigh win two academy awards for in 1939 and 1951?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What did Vivien Leigh win two academy awards for in 1939 and 1951?\nAnswer:\nassistant\nBest Actress",
+      "answer": "Vivien Leigh won two Academy Awards for Best Actress, for her performances in, Gone with the Wind (1939) and in the film of, A Streetcar Named Desire (1951).",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Vivien Leigh.pdf",
+          "page": 13,
+          "matched": false,
+          "score": 0.05931729155008394
+        }
+      ]
+    },
+    {
+      "doc": "Vivien Leigh.pdf",
+      "question": "What awards did Leigh's role in A Streetcar Named Desire win her in 1951 at the academy awards, BAFTA and NY Film Critics circle awards??",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What awards did Leigh's role in A Streetcar Named Desire win her in 1951 at the academy awards, BAFTA and NY Film Critics circle awards??\nAnswer:\nassistant\nOscar, BAFTA, NY Film Critics circle awards",
+      "answer": "Leigh's performance in A Streetcar Named Desire won Academy Award for Best Actress, a British Academy of Film and Television Arts (BAFTA) Award for Best British Actress, and a New York Film Critics Circle Award for Best Actress.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of longest films.pdf",
+          "page": 2,
+          "matched": false,
+          "score": 0.02779708130646282
+        }
+      ]
+    },
+    {
+      "doc": "2018 Indianapolis 500.pdf",
+      "question": "What driver had the fastest speed at the 2018 Indianapolis 500, what was that speed, and who were the two drivers behind that speed?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What driver had the fastest speed at the 2018 Indianapolis 500, what was that speed, and who were the two drivers behind that speed?\nAnswer:\nassistant\nTony Kanaan had the fastest speed at the 2018 Indianapolis 500, with a speed of 226.181 mph, and the two drivers behind that speed were Simon Pagenaud and Marco Andretti.",
+      "answer": "Tony Kanaan set a speed of 226.680 mph, ahead of Ed Carpenter and Gabby Chaves.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "2018 Indianapolis 500.pdf",
+          "page": 7,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "2018 Indianapolis 500.pdf",
+      "question": "What record did Sage Karam set, when, and whom did he beat to do so?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What record did Sage Karam set, when, and whom did he beat to do so?\nAnswer:\nassistant\nSage Karam set a record on May 16, beating Graham Rahal.",
+      "answer": "On Monday May 21, Sage Karam set the fastest speed at 226.461 mph, besting Tony Kanaan and Ryan Hunter-Reay.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "2018 Indianapolis 500.pdf",
+          "page": 9,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "Local governance in Kerala.pdf",
+      "question": "How many of each type of local government are in the Indian state of Kerala?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: How many of each type of local government are in the Indian state of Kerala?\nAnswer:\nassistant\nThe Indian state of Kerala has 14 district councils and 14 municipalities.",
+      "answer": "Kerala has 941 Grama panchayats, 152 Block Panchayats, 14 District Panchayats, 87 Municipalities, 6 Corporations and a total of 1200 Local Government.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "The Adventures of Tintin.pdf",
+          "page": 18,
+          "matched": false,
+          "score": 0.036243822075782535
+        }
+      ]
+    },
+    {
+      "doc": "Jonathan Jackson (actor).pdf",
+      "question": "In what film did Jonathan Jackson play Jesse Tuck, and what year did that film come out?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: In what film did Jonathan Jackson play Jesse Tuck, and what year did that film come out?\nAnswer:\nassistant\nJonathan Jackson played Jesse Tuck in the film \"The Twilight Saga: Breaking Dawn - Part 2,\" which was released in 2012.",
+      "answer": "In 2002, Jonathan Jackson played as Jesse Tuck in the film Tuck Everlasting.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Jonathan Jackson (actor).pdf",
+          "page": 4,
+          "matched": false,
+          "score": 0.030327214684756583
+        }
+      ]
+    },
+    {
+      "doc": "Courteney Cox.pdf",
+      "question": "What role did Courteney Cox play in the Scream series?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What role did Courteney Cox play in the Scream series?\nAnswer:\nassistant\nCourteney Cox played the role of Monica Geller in the Scream series.",
+      "answer": "Cox appeared as Gale Weathers in the films Scream (1996), Scream 2 (1997), and Scream 3 (2000).",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Courteney Cox.pdf",
+          "page": 9,
+          "matched": false,
+          "score": 0.04007285974499089
+        }
+      ]
+    },
+    {
+      "doc": "Will Yun Lee.pdf",
+      "question": "What role did Will Lee play in his 2012 game of Sleeping Dogs?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What role did Will Lee play in his 2012 game of Sleeping Dogs?\nAnswer:\nassistant\nIn the 2012 game of Sleeping Dogs, Will Lee played the role of a police officer.",
+      "answer": "In 2012, Will Yun Lee acted in the role of Wei Shen in the game Sleeping Dogs.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Ann B. Davis.pdf",
+          "page": 7,
+          "matched": false,
+          "score": 0.04411764705882353
+        }
+      ]
+    },
+    {
+      "doc": "Akkadian Empire.pdf",
+      "question": "In the Akkadian Empire, Rimush was succeeded by who?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: In the Akkadian Empire, Rimush was succeeded by who?\nAnswer:\nassistant\nNarim-Sin",
+      "answer": "Rimush was succeeded by Manishtushu (2269–2255 BC).",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Akkadian Empire.pdf",
+          "page": 17,
+          "matched": false,
+          "score": 0.029934518241347054
+        }
+      ]
+    },
+    {
+      "doc": "Kathryn Beaumont.pdf",
+      "question": "What did Kathryn Beaumont star in 1953?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What did Kathryn Beaumont star in 1953?\nAnswer:\nassistant\nPeter Pan",
+      "answer": "Kathryn Beaumont starred in the voice role of Wendy Darling in Peter Pan (1953).",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Michael Bublé discography.pdf",
+          "page": 2,
+          "matched": false,
+          "score": 0.022727272727272728
+        }
+      ]
+    },
+    {
+      "doc": "Grade inflation.pdf",
+      "question": "How did the proportion of second class honors awarded change between 1995 and 2011?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: How did the proportion of second class honors awarded change between 1995 and 2011?\nAnswer:\nassistant\nThe proportion of second class honors awarded increased between 1995 and 2011.",
+      "answer": "Between 1995 and 2011, the grade inflation proportion of upper second class awarded for first degree courses increased from 40.42% to 48.38%, whilst lower second class honours dropped from 34.97% to 28.9%.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Grade inflation.pdf",
+          "page": 12,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "Long Day's Journey into Night.pdf",
+      "question": "For which work did Eugene O'Neill win the Pulitzer Prize for Drama in 1957?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: For which work did Eugene O'Neill win the Pulitzer Prize for Drama in 1957?\nAnswer:\nassistant\nLong Day's Journey Into Night",
+      "answer": "O'Neill received the 1957 Pulitzer Prize for Drama for his work in Long Day's Journey into Night.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Long Day's Journey into Night.pdf",
+          "page": 9,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "June Marlowe.pdf",
+      "question": "In what role did the actress not play Miss Crabtree",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: In what role did the actress not play Miss Crabtree\nAnswer:\nassistant\nMary Moore",
+      "answer": "Marlowe acted as Miss Crabtree in Shiver My Timbers in 1931 and in Readin' and Writin' in 1932.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "June Marlowe.pdf",
+          "page": 4,
+          "matched": false,
+          "score": 0.022617124394184167
+        }
+      ]
+    },
+    {
+      "doc": "Reba (TV series).pdf",
+      "question": "What were the start and end dates of Reba on the WB and the CW?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What were the start and end dates of Reba on the WB and the CW?\nAnswer:\nassistant\nThe show Reba aired on the WB from 2001 to 2002 and then moved to the CW for its final season in 2002.",
+      "answer": "Reba was aired on The WB from October 5, 2001, to May 5, 2006, and on The CW from November 19, 2006, to February 18, 2007.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Reba (TV series).pdf",
+          "page": 11,
+          "matched": false,
+          "score": 0.0423728813559322
+        }
+      ]
+    },
+    {
+      "doc": "Adrian Rawlins.pdf",
+      "question": "Adrian Rawlins played Arthur Kidd in The Woman in Black (1989) and James Potter in which film series?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Adrian Rawlins played Arthur Kidd in The Woman in Black (1989) and James Potter in which film series?\nAnswer:\nassistant\nHarry Potter",
+      "answer": "Adrian Rawlins played Arthur Kidd in The Woman in Black (1989) and James Potter in the Harry Potter films.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Koenigsegg Agera.pdf",
+          "page": 10,
+          "matched": false,
+          "score": 0.25842696629213485
+        }
+      ]
+    },
+    {
+      "doc": "We Are Never Ever Getting Back Together.pdf",
+      "question": "Did We Are Never Ever Getting Back Together receive any Grammy Awards?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Did We Are Never Ever Getting Back Together receive any Grammy Awards?\nAnswer:\nassistant\nNo, We Are Never Ever Getting Back Together did not receive any Grammy Awards.",
+      "answer": "We Are Never Ever Getting Back Together received a Grammy nomination for Record of the Year at the 2013 Grammy Awards.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "We Are Never Ever Getting Back Together.pdf",
+          "page": 27,
+          "matched": false,
+          "score": 0.27102803738317754
+        }
+      ]
+    },
+    {
+      "doc": "2018 Australian Grand Prix.pdf",
+      "question": "What was Lewis Hamilton’s fastest lap in the 2018 Australian Grand Prix qualifying session?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What was Lewis Hamilton’s fastest lap in the 2018 Australian Grand Prix qualifying session?\nAnswer:\nassistant\nLewis Hamilton’s fastest lap in the 2018 Australian Grand Prix qualifying session was 1:26.145.",
+      "answer": "Hamilton led the session with a lap of 1 minute and 22.824 seconds that he recorded on his attempt, ahead of the Ferrari duo of Räikkönen and Vettel.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Stadium Australia.pdf",
+          "page": 15,
+          "matched": false,
+          "score": 0.2550335570469799
+        }
+      ]
+    },
+    {
+      "doc": "Rob Beckett.pdf",
+      "question": "What award was Beckett presented with in 2018 and by which bbc show?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What award was Beckett presented with in 2018 and by which bbc show?\nAnswer:\nassistant\nBeckett was presented with the award for Best Presenter at the 2018 National Television Awards by the BBC show \"Sunday Side Up\".",
+      "answer": "In 2018, Rob Beckett presented Wedding Day Winners with Lorraine Kelly and All Together Now for BBC One.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Rob Beckett.pdf",
+          "page": 2,
+          "matched": false,
+          "score": 0.04775828460038986
+        }
+      ]
+    },
+    {
+      "doc": "Stadium Australia.pdf",
+      "question": "How many seats were sold at the 2000 Summer Olympics?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: How many seats were sold at the 2000 Summer Olympics?\nAnswer:\nassistant\nThe document does not provide information about the number of seats sold at the 2000 Summer Olympics.",
+      "answer": "The opening ceremony for the 2000 Summer Olympics at the stadium sold out 110,000 seats, while the highest attendance for was recorded with 114,714 at the stadium for the closing ceremony of the same Games.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Stadium Australia.pdf",
+          "page": 15,
+          "matched": false,
+          "score": 0.3020833333333333
+        }
+      ]
+    },
+    {
+      "doc": "Dennis Hopper.pdf",
+      "question": "What award was Dennis Hopper nominated for in 1986?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What award was Dennis Hopper nominated for in 1986?\nAnswer:\nassistant\nDennis Hopper was nominated for an Academy Award in 1986.",
+      "answer": "In 1986, Dennis Hopper acclaimed for Blue Velvet and Hoosiers and nominated for the Academy Award for Best Supporting Actor.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of tallest buildings in India.pdf",
+          "page": 9,
+          "matched": false,
+          "score": 0.32
+        }
+      ]
+    },
+    {
+      "doc": "Portugal. The Man.pdf",
+      "question": "What song won Best Pop Duo/Group Performance at the Grammy Awards in 2018?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What song won Best Pop Duo/Group Performance at the Grammy Awards in 2018?\nAnswer:\nassistant\nThe song that won Best Pop Duo/Group Performance at the Grammy Awards in 2018 is \"Shallow\" by Lady Gaga and Bradley Cooper.",
+      "answer": "In 2018, \"Feel It Still\" won Best Pop Duo/Group Performance at the Grammy Awards and also won the Alternative Rock Song of the Year at the iHeartRadio Music Awards.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Femina Miss India.pdf",
+          "page": 22,
+          "matched": false,
+          "score": 0.053169734151329244
+        }
+      ]
+    },
+    {
+      "doc": "Coins of the United States dollar.pdf",
+      "question": "Which circulated United States coins were issued in the copper 91.67% nickel 8.33% composition?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Which circulated United States coins were issued in the copper 91.67% nickel 8.33% composition?\nAnswer:\nassistant\nQuarter-Dollar, Half-Dollar and Dollar coins",
+      "answer": "The Quarter-Dollar, Half-Dollar, and Dollar coins of United States were issued in the copper 91.67% nickel 8.33% composition for circulation.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Coins of the United States dollar.pdf",
+          "page": 3,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "Oklahoma.pdf",
+      "question": "Does Oklahoma have any indoor football teams?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Does Oklahoma have any indoor football teams?\nAnswer:\nassistant\nNo",
+      "answer": "The Oklahoma Defenders are an indoor football team that plays in the CPIFL in Tulsa.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Oklahoma.pdf",
+          "page": 20,
+          "matched": false,
+          "score": 0.026515151515151516
+        }
+      ]
+    },
+    {
+      "doc": "List of best-selling albums in the United States.pdf",
+      "question": "Does any artist have multiple albums with more than 20 million copies sold?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Does any artist have multiple albums with more than 20 million copies sold?\nAnswer:\nassistant\nYes, there are artists who have multiple albums with more than 20 million copies sold.",
+      "answer": "The Eagles albums Their Greatest Hits (1971-1975) and Hotel California both sold more than 20 million copies with sales of 38 million and 26 million copies, respectively.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of Chief Ministers of Andhra Pradesh.pdf",
+          "page": 4,
+          "matched": false,
+          "score": 0.23728813559322035
+        }
+      ]
+    },
+    {
+      "doc": "List of best-selling albums in the United States.pdf",
+      "question": "What was the best-selling album in the U.S. before Michael Jackson's Thriller, and for how long did it hold this record?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What was the best-selling album in the U.S. before Michael Jackson's Thriller, and for how long did it hold this record?\nAnswer:\nassistant\nThe best-selling album in the U.S. before Michael Jackson's Thriller was The Beatles' 1968 album The Beatles, which held the record for 19 years.",
+      "answer": "Their Greatest Hits was the best-selling album in the United States, and it stayed the best-selling album in the U.S. for some years (1971–1975), until it was surpassed by Michael Jackson's Thriller.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of best-selling albums in the United States.pdf",
+          "page": 5,
+          "matched": false,
+          "score": 0.05823068309070549
+        }
+      ]
+    },
+    {
+      "doc": "List of best-selling albums in the United States.pdf",
+      "question": "How did the Boston album perform in terms of sales?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: How did the Boston album perform in terms of sales?\nAnswer:\nassistant\n17× Platinum",
+      "answer": "The Boston album is the best-selling album in the United States, selling 17,000,000 shipments.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of best-selling albums in the United States.pdf",
+          "page": 3,
+          "matched": false,
+          "score": 0.04064470918009811
+        }
+      ]
+    },
+    {
+      "doc": "AirPort Time Capsule.pdf",
+      "question": "What are the wifi capabilities of the AirPort Time Capsule?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What are the wifi capabilities of the AirPort Time Capsule?\nAnswer:\nassistant\nThe AirPort Time Capsule has dual-band operation capabilities.",
+      "answer": "802.11ac was supported in the 5th generation of the AirPort Time Capsule.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "AirPort Time Capsule.pdf",
+          "page": 4,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "AirPort Time Capsule.pdf",
+      "question": "What was the similarity in price between the 2 TB and 3 TB models?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What was the similarity in price between the 2 TB and 3 TB models?\nAnswer:\nassistant\nThe 2 TB and 3 TB models were priced similarly.",
+      "answer": "The 2 TB and 3 TB models were kept at the $299 and $499 price points.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Stadium Australia.pdf",
+          "page": 15,
+          "matched": false,
+          "score": 0.28368794326241137
+        }
+      ]
+    },
+    {
+      "doc": "AirPort Time Capsule.pdf",
+      "question": "What is are the networking features of the fifth-generation Time Capsule?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What is are the networking features of the fifth-generation Time Capsule?\nAnswer:\nassistant\nThe fifth-generation Time Capsule has guest networking and dual-band operation.",
+      "answer": "The fifth-generation Time Capsule includes an 802.11ac and dual-band operation.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "AirPort Time Capsule.pdf",
+          "page": 4,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "The Adventures of Tintin.pdf",
+      "question": "What are some albums in the The Adventures of Tintin?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What are some albums in the The Adventures of Tintin?\nAnswer:\nassistant\nCigars of the Pharaoh, The Blue Lotus, The Secret of the Unicorn, Red Rackham's Treasure, The Seven Crystal Balls, Prisoners of the Sun, Land of Black Gold, Destination Moon, Explorers on the Moon, The Calculus Affair, The Red Sea Sharks, Tintin in Tibet, The Castafiore Emerald, Flight 714 to Sydney, Tintin and the Picaros, Tintin and Alph-Art.",
+      "answer": "The Crab with the Golden Claws (1941), The Secret of the Unicorn (1943) and Red Rackham's Treasure (1944) are albums of The Adventures of Tintin.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "The Adventures of Tintin.pdf",
+          "page": 19,
+          "matched": false,
+          "score": 0.0628099173553719
+        }
+      ]
+    },
+    {
+      "doc": "List of tallest buildings in India.pdf",
+      "question": "What happened in 1961?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What happened in 1961?\nAnswer:\nassistant\nThe document does not provide information about what happened in 1961.",
+      "answer": "The LIC Building was the tallest building in India in 1959 and was surpassed by Mumbai's first skyscraper, the Usha Kiran Building, in 1961, which is 80 m high.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of tallest buildings in India.pdf",
+          "page": 9,
+          "matched": false,
+          "score": 0.30303030303030304
+        }
+      ]
+    },
+    {
+      "doc": "List of longest films.pdf",
+      "question": "What films are eight hours long?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What films are eight hours long?\nAnswer:\nassistant\nEmpire, Sleep",
+      "answer": "\"Baa Baa Land''s length of eight hours has it the nineteenth-longest film, the same length as 1967's film \"The Imitation of Christ\" and 2013's \"sleep.\"",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of longest films.pdf",
+          "page": 2,
+          "matched": false,
+          "score": 0.05339105339105339
+        }
+      ]
+    },
+    {
+      "doc": "Crosby, Stills & Nash (album).pdf",
+      "question": "How far up the Top 100 Chart did the 2 singles from the album Crosby, Stills & Nash travel before they peaked?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: How far up the Top 100 Chart did the 2 singles from the album Crosby, Stills & Nash travel before they peaked?\nAnswer:\nassistant\n21",
+      "answer": "The album Crosby, Stills & Nash\"'s two singles, \"Marrakesh Express\" and \"Suite: Judy Blue Eyes,\" peaked respectively at #28 and at #21 in 1969 on the Billboard Hot 100 singles chart.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Crosby, Stills & Nash (album).pdf",
+          "page": 4,
+          "matched": false,
+          "score": 0.05371642723297939
+        }
+      ]
+    },
+    {
+      "doc": "List of Guardians of the Galaxy members.pdf",
+      "question": "What character is named after the city where all movies are made, and what movie did it join in?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What character is named after the city where all movies are made, and what movie did it join in?\nAnswer:\nassistant\nThe character named after the city where all movies are made is Ant-Man, and it joined the team in All-New Guardians of the Galaxy #12 (2017).",
+      "answer": "Hollywood joins the Galactic Guardians in the Guardians of the Galaxy.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of Guardians of the Galaxy members.pdf",
+          "page": 3,
+          "matched": false,
+          "score": 0.17040358744394618
+        }
+      ]
+    },
+    {
+      "doc": "Freddy Fender.pdf",
+      "question": "During what year was Freddy Fender's singles  \"Before the Next Teardrop Falls\" and \"Wasted Days and Wasted Nights\" released in?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: During what year was Freddy Fender's singles  \"Before the Next Teardrop Falls\" and \"Wasted Days and Wasted Nights\" released in?\nAnswer:\nassistant\nFreddy Fender's singles \"Before the Next Teardrop Falls\" and \"Wasted Days and Wasted Nights\" were released in the year 1975.",
+      "answer": "Freddy Fender's singles \"Before the Next Teardrop Falls\" and \"Wasted Days and Wasted Nights\" released in 1975.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Freddy Fender.pdf",
+          "page": 9,
+          "matched": false,
+          "score": 0.23809523809523808
+        }
+      ]
+    },
+    {
+      "doc": "2018 Chicago Bears season.pdf",
+      "question": "Which players signed with new teams on March 15?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Which players signed with new teams on March 15?\nAnswer:\nassistant\nChristian Jones, Sherrick McManis.",
+      "answer": "On March 15, Christian Jones and kicker Cairo Santos signed with the Detroit Lions and New York Jets, respectively.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "2018 Chicago Bears season.pdf",
+          "page": 3,
+          "matched": false,
+          "score": 0.049168474331164135
+        }
+      ]
+    },
+    {
+      "doc": "Peter Egan.pdf",
+      "question": "What roles did Peter Egan play in the film \"Callan\" and \"Chariots of Fire\" respectively?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What roles did Peter Egan play in the film \"Callan\" and \"Chariots of Fire\" respectively?\nAnswer:\nassistant\nPeter Egan played the role of Callan in the film \"Callan\" and the role of Harvey in \"Chariots of Fire\".",
+      "answer": "Peter Egan played a role as Meres in Callan (1974), and as Duke of Sutherland in \"Chariots of Fire\" (1981).",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Stadium Australia.pdf",
+          "page": 15,
+          "matched": false,
+          "score": 0.2692307692307692
+        }
+      ]
+    },
+    {
+      "doc": "California Polytechnic State University.pdf",
+      "question": "Were many applicants admitted to California Polytechnic State University in 2017?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Were many applicants admitted to California Polytechnic State University in 2017?\nAnswer:\nassistant\nNo, only 10% of applicants were admitted to California Polytechnic State University in 2017.",
+      "answer": "In 2017, 16,695 freshmen were accepted out of 48,571 applicants, a 34.4% acceptance rate, which was 4.9% higher than the acceptance rate in 2016.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of Formula One driver records.pdf",
+          "page": 53,
+          "matched": false,
+          "score": 0.15028901734104047
+        }
+      ]
+    },
+    {
+      "doc": "Jon Bon Jovi.pdf",
+      "question": "What is the acting history of Jon Bon Jovi between the years 1995 to 2011 but not including the year 2000 ?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What is the acting history of Jon Bon Jovi between the years 1995 to 2011 but not including the year 2000 ?\nAnswer:\nassistant\nThe acting history of Jon Bon Jovi between the years 1995 to 2011 but not including the year 2000 is as follows: In 1995, he played the role of The Painter in the film \"Moonlight and Valentino\". In 1996, he played the role of Robin Grange in the film \"The Leading Man\". In 1997, he played the role of Kevin in the film \"Little City\". In 1997, he played the role of Jon in the film \"Destination Anywhere: The Film\". In",
+      "answer": "Jon Bon Jovi is an actor in the movies Moonlight and Valentino, The Leading Man, Destination Anywhere, Homegrown, Little City, No Looking Back, Row Your Boat, Vampires Los Muertos, U-571, Cry Wolf, National Lampoon's Pucked, and New Year's Eve.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Jon Bon Jovi.pdf",
+          "page": 6,
+          "matched": false,
+          "score": 0.060714285714285714
+        }
+      ]
+    },
+    {
+      "doc": "Ann B. Davis.pdf",
+      "question": "Ann B. Davis which role in which shows in 1981 and 1990?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Ann B. Davis which role in which shows in 1981 and 1990?\nAnswer:\nassistant\nAlice Nelson",
+      "answer": "Ann B. Davis reprised her role as Alice Nelson in two short-lived television series: The Brady Brides (1981) and The Bradys (1990), one of which lasted six episodes.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Ann B. Davis.pdf",
+          "page": 4,
+          "matched": false,
+          "score": 0.04508566275924256
+        }
+      ]
+    },
+    {
+      "doc": "Mercury Grand Marquis.pdf",
+      "question": "What was the horsepower of the Ford Modular V8 in 2001?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What was the horsepower of the Ford Modular V8 in 2001?\nAnswer:\nassistant\n221 hp (224 PS)",
+      "answer": "In 2001, the Ford Modular V8 had 220 and 235 hp of output.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Mercury Grand Marquis.pdf",
+          "page": 10,
+          "matched": false,
+          "score": 0.056847545219638244
+        }
+      ]
+    },
+    {
+      "doc": "Koenigsegg Agera.pdf",
+      "question": "How much power and torque does the Agera R engine make?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: How much power and torque does the Agera R engine make?\nAnswer:\nassistant\nThe Agera R engine produces 450 kg of downforce at 250 km/h.",
+      "answer": "Agera R's twin-turbo V8 engine have a power output of 1,140 PS (1,124 hp; 838 kW) and 1,200 N⋅m (885 lb⋅ft) of torque at 4,100 rpm.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Koenigsegg Agera.pdf",
+          "page": 4,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "Koenigsegg Agera.pdf",
+      "question": "What is the description of the Agera?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What is the description of the Agera?\nAnswer:\nassistant\nThe Agera is a car that has a power-to-weight ratio of 1.39 kg (3.06 lb) per horsepower.",
+      "answer": "The Agera is powered by a 5.0-litre V8 twin-turbo engine which generates a maximum power output of 960 PS (947 hp; 706 kW) at 6,900 rpm and 1,100 N⋅m (811 lbf⋅ft) of torque at 4,000 rpm.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Koenigsegg Agera.pdf",
+          "page": 4,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "Koenigsegg Agera.pdf",
+      "question": "How much power does the Agera’s V8 engine make?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: How much power does the Agera’s V8 engine make?\nAnswer:\nassistant\nThe Agera’s V8 engine makes 1,360 PS (1,000 kW) of power.",
+      "answer": "The 5.0-litre V8 engine has a power of 1,176 PS (865 kW; 1,160 hp).",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Koenigsegg Agera.pdf",
+          "page": 4,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "Koenigsegg Agera.pdf",
+      "question": "What are the power output and torque on the Koenigsegg Agera Final?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What are the power output and torque on the Koenigsegg Agera Final?\nAnswer:\nassistant\nThe Koenigsegg Agera Final has a power output of 1,360 PS (1,000 kW) at 7,500 rpm and a torque of 1,371 N·m (1,011 lb·ft) at 6,000 rpm.",
+      "answer": "The Koenigsegg Agera Final generates a power output of 1,360 PS (1,000 kW; 1,341 hp) at 7,500 and 1,371 N⋅m (1,011 lb⋅ft) of torque at 6,000.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Koenigsegg Agera.pdf",
+          "page": 4,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "Jennifer Hudson.pdf",
+      "question": "Which role did Jennifer Hudson play in the television special Hairspray Live! in 2016?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Which role did Jennifer Hudson play in the television special Hairspray Live! in 2016?\nAnswer:\nassistant\nJennifer Hudson played the role of Motormouth Maybelle in the television special Hairspray Live! in 2016.",
+      "answer": "In 2016, Hudson played Motormouth Maybelle in Hairspray Live!.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Akkadian Empire.pdf",
+          "page": 17,
+          "matched": false,
+          "score": 0.016728624535315983
+        }
+      ]
+    },
+    {
+      "doc": "Michael Bublé discography.pdf",
+      "question": "What album performed the worst?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What album performed the worst?\nAnswer:\nassistant\nLet It Snow!",
+      "answer": "Michael Bublé's album Come Fly with Me did not chart on the CAN, AUT, GER, and SWI charts.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Michael Bublé discography.pdf",
+          "page": 4,
+          "matched": false,
+          "score": 0.12805755395683452
+        }
+      ]
+    },
+    {
+      "doc": "1986 FIFA World Cup.pdf",
+      "question": "How did Mexico play against Belgium, Iraq and Paraguay?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: How did Mexico play against Belgium, Iraq and Paraguay?\nAnswer:\nassistant\nMexico played against Belgium, Iraq, and Paraguay in the group stage of the 1986 FIFA World Cup.",
+      "answer": "Mexico beat Belgium with 2–1, Iraq by 1–0, and scored 1–1 with Paraguay.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "1986 FIFA World Cup.pdf",
+          "page": 6,
+          "matched": true,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "doc": "Tom Hughes (actor).pdf",
+      "question": "In which 2010 films did Tom Hughes appear firstly as Chaz Jank and then as Bruce Pearson?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: In which 2010 films did Tom Hughes appear firstly as Chaz Jank and then as Bruce Pearson?\nAnswer:\nassistant\nTom Hughes appeared in the films \"Sex & Drugs & Rock & Roll\" and \"Cemetery Junction\" in 2010.",
+      "answer": "In 2010, Tom Hughes appeared in Sex & Drugs & Rock & Roll as Chaz Jankel and as Bruce Pearson in Cemetery Junction.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Tom Hughes (actor).pdf",
+          "page": 1,
+          "matched": false,
+          "score": 0.03970223325062035
+        }
+      ]
+    },
+    {
+      "doc": "Tom Hughes (actor).pdf",
+      "question": "What two films did Tom Hughes appear in during 2011, and what role did he play in the second film?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What two films did Tom Hughes appear in during 2011, and what role did he play in the second film?\nAnswer:\nassistant\nTom Hughes appeared in \"Silk\" and \"Richard II\" in 2011. In the second film, he played the role of Aumerle.",
+      "answer": "In 2011, Tom Hughes appeared in Silk as Nick Slade and in Page Eight.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Tom Hughes (actor).pdf",
+          "page": 2,
+          "matched": false,
+          "score": 0.06239460370994941
+        }
+      ]
+    },
+    {
+      "doc": "Jacob Rees-Mogg.pdf",
+      "question": "How did Rees-Mogg do in the election?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: How did Rees-Mogg do in the election?\nAnswer:\nassistant\nThe information provided does not include details about Rees-Mogg's performance in the election.",
+      "answer": "Rees-Mogg won with a majority of 4,914 votes.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Jacob Rees-Mogg.pdf",
+          "page": 32,
+          "matched": false,
+          "score": 0.1069364161849711
+        }
+      ]
+    },
+    {
+      "doc": "Deuterocanonical books.pdf",
+      "question": "What dod Psalm 151 and Tobit books have in common?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: What dod Psalm 151 and Tobit books have in common?\nAnswer:\nassistant\nBoth Psalm 151 and Tobit are considered deuterocanonical books.",
+      "answer": "Psalm 151 and Tobit are deuterocanonical books.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "Deuterocanonical books.pdf",
+          "page": 19,
+          "matched": false,
+          "score": 0.2112676056338028
+        }
+      ]
+    },
+    {
+      "doc": "Lionel Messi.pdf",
+      "question": "Which season did Lionel Messi achieve the highest scores and how many was that?",
+      "prediction": "system\nYou are a helpful assistant for document understanding.\nuser\nYou are a helpful assistant for document understanding. Given the document image and the question, answer concisely.\nQuestion: Which season did Lionel Messi achieve the highest scores and how many was that?\nAnswer:\nassistant\nLionel Messi achieved his highest scores in the winter season, and the number was 10.",
+      "answer": "During the 2011–12 season, Lionel Messi of Barcelona in the La Liga scored 73 goals, which is the highest goal he achieved for a season.",
+      "evidence": "",
+      "pages_used": [
+        {
+          "doc": "List of Chief Ministers of Andhra Pradesh.pdf",
+          "page": 4,
+          "matched": false,
+          "score": 0.2616822429906542
+        }
+      ]
+    }
+  ]
+}
