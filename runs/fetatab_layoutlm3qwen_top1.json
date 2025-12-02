@@ -1,0 +1,523 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "results": [
+    {
+      "doc": "Miles Heizer.pdf",
+      "page": 2,
+      "question": "What part did Derek Theler play in the movie How Sarah Got Her Wings?",
+      "answer": "Derek Theler starred as Jordan in How Sarah Got Her Wings, which was released in 2015.",
+      "prediction": "Derek Theler played the role of the Narrator in the movie How Sarah Got Her Wings.  The film was released on July 25, 2017, and tells the story of a young girl who is inspired to become a pilot by her grandfather's tales of his time as a"
+    },
+    {
+      "doc": "List of awards and nominations received by Michael Jackson.pdf",
+      "page": 16,
+      "question": "What did Srishti Rana achieve in 2013?",
+      "answer": "Srishti Rana was crowned as Miss Asia Pacific World 2013.",
+      "prediction": "In 2013, Srishti Rana won the Miss India World 2013 title. She represented India in the Miss World 2013 competition held in London, UK. She was also a semifinalist in the Miss World 2014 competition and represented India in"
+    },
+    {
+      "doc": "The Raid 2.pdf",
+      "page": 14,
+      "question": "How did Paraguay do at the 1996 World Cup at the group stage?",
+      "answer": "In first round matches, Paraguay defeated Iraq (1–0, goal Romerito) and then tied Mexico (1–1, goal Romerito) and Belgium (2–2, both goals Roberto Cabañas).",
+      "prediction": "Paraguay was in the group with the Netherlands, Cameroon, and Mexico. They were able to win against Cameroon 1-0 and tied Mexico 2-2. However, they lost to the Netherlands 1-3. This result led to Paraguay's elimination from the tournament.---\n2014"
+    },
+    {
+      "doc": "Big Brovaz.pdf",
+      "page": 6,
+      "question": "Which Arthur season sets were released in Region 1?",
+      "answer": "WGBH Home Video released two Region 1 Arthur season sets; they released Season 10 on March 25, 2008 and Season 11 on September 2, 2008.",
+      "prediction": "The first season of Arthur was released in Region 1 on October 18, 2005. The second season was released on February 7, 2006. The third season was released on November 7, 2006. The fourth season was released on May 1"
+    },
+    {
+      "doc": "Standard deviation.pdf",
+      "page": 15,
+      "question": "How successful were the films Aan and Awaara?",
+      "answer": "Aan was the highest-gross Indian film overseas at the time, until it was surpassed by Awaara (1951) released in 1954.",
+      "prediction": "Aan and Awaara were very successful in their time. They are considered to be among the greatest films of the 1950s. The films are still loved by many people today and have been included in many lists of the best Indian films of all time. Aan was particularly successful, as it"
+    },
+    {
+      "doc": "List of Canadian islands by area.pdf",
+      "page": 1,
+      "question": "Who started their term as Chief Minister in 1995, and what party did he belong to?",
+      "answer": "After 1995, the Telugu Desam Party was headed by N. Chandrababu Naidu..",
+      "prediction": "G. Srinivasan started his term as the Chief Minister of Tamil Nadu in 1995. He was a member of the Indian National Congress (INC). G. Srinivasan was the first non-Tamil Chief Minister of Tamil Nadu and the only non-Tamil Chief Minister of the state to"
+    },
+    {
+      "doc": "FIFA Club World Cup.pdf",
+      "page": 27,
+      "question": "Which role did Christa B. Allen play in 2015 alone?",
+      "answer": "In 2015, Christa B. Allen had a recurring role as Robyn in Baby Daddy.",
+      "prediction": "In 2015, Christa B. Allen played the role of a young woman in the film The Last Days of Peoria. This role was written specifically for her and she was the only person who could play it. The character was based on the real-life story of a young woman from Peoria,"
+    },
+    {
+      "doc": "Subaru Tribeca.pdf",
+      "page": 8,
+      "question": "What are the undisputed latitude and longitude ranges of Japan?",
+      "answer": "Japan extends from 20° to 45° north longitude (Okinotorishima to Benten-jima) and from 122° to 153° east latitude (Yonaguni to Minami Torishima).",
+      "prediction": "The latitude range is 24.6195 to 45.8572, and the longitude range is 123.5670 to 145.8964. The country is located in East Asia, and it occupies a large archipelago of"
+    },
+    {
+      "doc": "Yvonne Strahovski.pdf",
+      "page": 8,
+      "question": "When did season 5 of the Total Drama All-Stars and Pahkitew Island's premiere in the United States on the Carton Network?",
+      "answer": "The Total Drama All-Stars and Pahkitew Island's season first premiered in the United States starting on September 10, 2013 on Cartoon Network with the first part, while the second part premiered in the United States on July 7, 2014.",
+      "prediction": "The 5th season of the Total Drama All-Stars and Pahkitew Island premiered on September 2, 2016. The season consisted of six episodes. 41 new contestants were featured in the series. The season was produced by The Carton Network and Total Drama Productions. The series"
+    },
+    {
+      "doc": "Smallville.pdf",
+      "page": 36,
+      "question": "When did Cartoon Network air Total Drama All-Stars and Teletoon?",
+      "answer": "Cartoon Network aired the entire season starting on September 10, 2013 in the United States, with Teletoon airing the season later on January 9, 2014.",
+      "prediction": "Total Drama All-Stars was first aired on Cartoon Network in 2009 and later on Teletoon in 2011. It is a reality competition series that features the characters of the original Total Drama series. The show follows the characters as they compete in various challenges to win a prize. The"
+    },
+    {
+      "doc": "List of awards and nominations received by Michael Jackson.pdf",
+      "page": 41,
+      "question": "Victoria Hamilton played the role of Queen Victoria in which 2001 film?",
+      "answer": "Hamilton played the role of Queen Victoria in 2001 in \"Victoria & Albert.\"",
+      "prediction": "The 2001 film The Young Victoria was a historical drama about the early years of Queen Victoria's reign. It was directed by Jean-Marc Vallée and written by Julian Fellowes. Victoria Hamilton played the young Queen Victoria in the film. 2001 was also the year of the film’s"
+    },
+    {
+      "doc": "Havana (Camila Cabello song).pdf",
+      "page": 4,
+      "question": "Which role did Victoria Hamilton portray in the 2001 film Victoria & Albert?",
+      "answer": "In 2001, Victoria Hamilton appeared in a television role as Queen Victoria in Victoria & Albert.",
+      "prediction": "Victoria Hamilton played the role of Victoria in the 2001 film Victoria & Albert. The film was directed by John Madden and stars Kate Winslet as the young Queen Victoria and Ewan McGregor as Prince Albert. It is a biographical drama that follows the early years of the royal couple's relationship. 2"
+    },
+    {
+      "doc": "Renault Clio.pdf",
+      "page": 10,
+      "question": "What films was Victoria Hamilton in during 1995 and 1999?",
+      "answer": "Victoria Hamilton acted in the 1995 film Pride and Prejudice as Mrs Forster, the 1995 film Persuasion as Henrietta Musgrove, and the 1999 film Mansfield Park as Maria Bertram.",
+      "prediction": "Victoria Hamilton was in the films 101 Dalmatians and The Parent Trap in 1995. She was also in the film A Walk to Remember in 1999. 101 Dalmatians is a Disney animated film based on the book by Dodie Smith."
+    },
+    {
+      "doc": "2016 Cleveland Browns season.pdf",
+      "page": 2,
+      "question": "What's the biggest earthquake in South Africa since the 1969 Tulbagh earthquake?",
+      "answer": "The shock was assigned a magnitude of 5.5 on the Richter scale by the Council for Geoscience (CGS) in South Africa, making it the biggest earthquake in South Africa since the 1969 Tulbagh earthquake, which had a magnitude of 6.3 on the Richter scale.",
+      "prediction": "The biggest earthquake in South Africa since the 1969 Tulbagh earthquake was the 2016 Kumquat earthquake. This quake had a magnitude of 6.4 on the Richter scale and caused widespread damage across the country, including in Cape Town, Durban and Johannesburg. It is also"
+    },
+    {
+      "doc": "List of governors of Bengal.pdf",
+      "page": 1,
+      "question": "What did Dylan Minnette play in 2010?",
+      "answer": "In 2010, Dylan Minnette played as Kenny in the film Let Me In.",
+      "prediction": "In 2010, Dylan Minnette played in the movie “17 Again”. This movie is a comedy film based on the 2009 Japanese film of the same name. It is about a young woman who has the opportunity to go back in time and relive her senior year of high school"
+    },
+    {
+      "doc": "Dave Bautista.pdf",
+      "page": 31,
+      "question": "Which actress appeared in the 2012 film Thaandavam playing the character Sarah Vinayagam?",
+      "answer": "Amy Jackson appeared in Thaandavam (2012).",
+      "prediction": "The actress who played the character Sarah Vinayagam in the 2012 film Thaandavam is Priya. The film was directed by Anand Shankar and produced by Sivakarthikeyan. It was a commercial success, with Priya receiving critical acclaim for her performance."
+    },
+    {
+      "doc": "List of Faerie Tale Theatre episodes.pdf",
+      "page": 1,
+      "question": "What was the most recent year Rosberg won the Grand Slam, and how many times has he done that?",
+      "answer": "The 2016 European Grand Prix marked Rosberg's second career Grand Slam.",
+      "prediction": "In 2016, Rosberg won the Grand Slam for the second time. The Grand Slam is a term used in Formula One to describe winning the World Championship, the Grand Prix, the pole position, and the fastest lap of the season. It was first used in 1953 by Stirling"
+    },
+    {
+      "doc": "Thomas F. Wilson.pdf",
+      "page": 9,
+      "question": "What two engine options did Mazda BT50 update the Ford Everest with and what were the engine specs?",
+      "answer": "Mazda BT-50 facelifted the Ford Everest with either a 2.5-liter turbodiesel with 143 PS (105 kW; 141 hp) or a 3.0-liter diesel with 156 PS (115 kW; 154 hp).",
+      "prediction": "The engine options for the new BT50 include 2.2L and 3.2L V6 turbocharged diesel engines, which are updated from the Ford Everest. The 2.2L diesel engine is rated at 148kW (200hp) and 430"
+    },
+    {
+      "doc": "Need You Now (Lady Antebellum song).pdf",
+      "page": 4,
+      "question": "What award was received by Jason Donova, Steven Pimlott and Anthony Van Laast in 1992?",
+      "answer": "At the 1991 London revival, the Laurence Olivier Award was received by Jason Donovan, Steven Pimlott, and Anthony Van Laast in 1992.",
+      "prediction": "Donova, Pimlott and Van Laast won the 1992 Tony Award for Best Direction of a Musical. 1992 was also the year that the show's original choreographer, Van Laast, left the show to pursue other projects. He was replaced by the current choreographer"
+    },
+    {
+      "doc": "List of awards and nominations received by Game of Thrones.pdf",
+      "page": 33,
+      "question": "Who was E. M. S. Namboodiripad and what was his political career? ",
+      "answer": "E. M. S. Namboodiripad was an Indian communist politician, who served as the first Chief Minister of Kerala state in 1957–59 and then again in 1967–69.",
+      "prediction": "E. M. S. Namboodiripad was a politician and revolutionary socialist who served as the first Chief Minister of Kerala from 1957 to 1967. He was a member of the Communist Party of India (CPI) and was known for his role in the Kerala Legislative"
+    },
+    {
+      "doc": "List of Major League Baseball progressive single-season home run leaders.pdf",
+      "page": 4,
+      "question": "How many times did K. Karunakaran serve as the Chief Minister of Kerala, and what were the dates of each tenure?",
+      "answer": "K. Karunakaran served as the Chief Minister of Kerala four times: for a brief period from March 1977 to April 1977, another short term from December 1981 to March 1982, followed by a brief period of president's rule from May 1982 to March 1987, and from June to March 1995.",
+      "prediction": "K. Karunakaran served as the Chief Minister of Kerala three times. The first time was from 2013 to 2014, the second time was from 2016 to 2017, and the third time was from 2018 to 2"
+    },
+    {
+      "doc": "Greta Garbo.pdf",
+      "page": 15,
+      "question": "What did Vivien Leigh win two academy awards for in 1939 and 1951?",
+      "answer": "Vivien Leigh won two Academy Awards for Best Actress, for her performances in, Gone with the Wind (1939) and in the film of, A Streetcar Named Desire (1951).",
+      "prediction": "Vivien Leigh won two Academy Awards for her performances in Gone with the Wind (1939) and A Streetcar Named Desire (1951). She was the first actress to win an Oscar for playing a character from a novel. 1951 was the last time that an actress won"
+    },
+    {
+      "doc": "Thomas F. Wilson.pdf",
+      "page": 9,
+      "question": "What awards did Leigh's role in A Streetcar Named Desire win her in 1951 at the academy awards, BAFTA and NY Film Critics circle awards??",
+      "answer": "Leigh's performance in A Streetcar Named Desire won Academy Award for Best Actress, a British Academy of Film and Television Arts (BAFTA) Award for Best British Actress, and a New York Film Critics Circle Award for Best Actress.",
+      "prediction": "Leigh's performance in A Streetcar Named Desire won her a Golden Globe Award, an Academy Award for Best Actress, a BAFTA Award and a New York Film Critics Circle Award. 1951 was the year that Leigh received four major awards for her performance in A Streetcar Named Desire. 19"
+    },
+    {
+      "doc": "Subaru Tribeca.pdf",
+      "page": 8,
+      "question": "What driver had the fastest speed at the 2018 Indianapolis 500, what was that speed, and who were the two drivers behind that speed?",
+      "answer": "Tony Kanaan set a speed of 226.680 mph, ahead of Ed Carpenter and Gabby Chaves.",
+      "prediction": "The driver with the fastest speed at the 2018 Indianapolis 500 was Ed Carpenter, who achieved a speed of 237.697 mph. The two drivers behind him were Tony Kanaan and Scott Dixon. The average speed for the race was 178.4"
+    },
+    {
+      "doc": "Yankee Stadium.pdf",
+      "page": 24,
+      "question": "What record did Sage Karam set, when, and whom did he beat to do so?",
+      "answer": "On Monday May 21, Sage Karam set the fastest speed at 226.461 mph, besting Tony Kanaan and Ryan Hunter-Reay.",
+      "prediction": "Sage Karam set the record of fastest time to win a pole position, in 2015. He beat Nelson Piquet Jr. who set the previous record. The time was 1:08:497.136.051.018.01"
+    },
+    {
+      "doc": "Jeffrey Donovan.pdf",
+      "page": 6,
+      "question": "How many of each type of local government are in the Indian state of Kerala?",
+      "answer": "Kerala has 941 Grama panchayats, 152 Block Panchayats, 14 District Panchayats, 87 Municipalities, 6 Corporations and a total of 1200 Local Government.",
+      "prediction": "There are 14 districts in the Indian state of Kerala. There are also 14 taluks and 152 blocks. The district of Thrissur is the largest district in terms of population, followed by Kozhikode and Palakkad. The smallest district is Pathanamth"
+    },
+    {
+      "doc": "List of awards and nominations received by Michael Jackson.pdf",
+      "page": 41,
+      "question": "In what film did Jonathan Jackson play Jesse Tuck, and what year did that film come out?",
+      "answer": "In 2002, Jonathan Jackson played as Jesse Tuck in the film Tuck Everlasting.",
+      "prediction": "In the 2014 film, The Divergent Series: Insurgent, Jonathan Jackson played Jesse Tuck. 2014 is the year that the film was released. 2014 is also the year that the film was released. Jesse Tuck is a character in the film."
+    },
+    {
+      "doc": "Kokoda Track.pdf",
+      "page": 9,
+      "question": "What role did Courteney Cox play in the Scream series?",
+      "answer": "Cox appeared as Gale Weathers in the films Scream (1996), Scream 2 (1997), and Scream 3 (2000).",
+      "prediction": "Courteney Cox played the role of Gale Weathers in the Scream series. She was the lead character in the first three films and also appeared in the fourth film. Her character is a lawyer and a reporter who becomes involved in the series of murders that are taking place in the fictional town of Woodsboro, California"
+    },
+    {
+      "doc": "Big Brovaz.pdf",
+      "page": 6,
+      "question": "What role did Will Lee play in his 2012 game of Sleeping Dogs?",
+      "answer": "In 2012, Will Yun Lee acted in the role of Wei Shen in the game Sleeping Dogs.",
+      "prediction": "Will Lee played the role of the main protagonist, Wei Cheng, in the 2012 action-adventure game Sleeping Dogs. The game is set in the fictional city of Hong Kong and follows the story of a Hong Kong police officer who is framed for murder and becomes an undercover agent to clear his name. "
+    },
+    {
+      "doc": "List of Game of the Year awards.pdf",
+      "page": 32,
+      "question": "In the Akkadian Empire, Rimush was succeeded by who?",
+      "answer": "Rimush was succeeded by Manishtushu (2269–2255 BC).",
+      "prediction": "After the death of Rimush, he was succeeded by his brother, Naram-Sin. He is often considered to be one of the most successful rulers of the Akkadian Empire. 10 years after his accession, he conquered Elam and Sumer and Akkad. He also expanded his empire as far"
+    },
+    {
+      "doc": "1916 Cumberland vs. Georgia Tech football game.pdf",
+      "page": 6,
+      "question": "What did Kathryn Beaumont star in 1953?",
+      "answer": "Kathryn Beaumont starred in the voice role of Wendy Darling in Peter Pan (1953).",
+      "prediction": "In 1953, Beaumont starred in the film “The Adventures of Robin Hood.” The film was directed by Michael Curtiz and featured Errol Flynn as Robin Hood. Beaumont played the role of Marion, who was the love interest of Robin Hood. She was also the daughter of the Sheriff of Nottingham"
+    },
+    {
+      "doc": "List of Chief Ministers of West Bengal.pdf",
+      "page": 4,
+      "question": "How did the proportion of second class honors awarded change between 1995 and 2011?",
+      "answer": "Between 1995 and 2011, the grade inflation proportion of upper second class awarded for first degree courses increased from 40.42% to 48.38%, whilst lower second class honours dropped from 34.97% to 28.9%.",
+      "prediction": "The proportion of second class honors awarded increased from 43.8% in 1995 to 50.2% in 2011. This is likely due to the increase in the number of students who are able to achieve this level of academic achievement. The increase in the number of"
+    },
+    {
+      "doc": "List of Spartacus characters.pdf",
+      "page": 18,
+      "question": "For which work did Eugene O'Neill win the Pulitzer Prize for Drama in 1957?",
+      "answer": "O'Neill received the 1957 Pulitzer Prize for Drama for his work in Long Day's Journey into Night.",
+      "prediction": "In 1957, Eugene O'Neill won the Pulitzer Prize for Drama for his play The Iceman Cometh. This play was first performed in 1939, but it was not until 1957 that O'Neill received the prize for it. The play is a tragicomedy"
+    },
+    {
+      "doc": "List of awards and nominations received by Michael Jackson.pdf",
+      "page": 41,
+      "question": "In what role did the actress not play Miss Crabtree",
+      "answer": "Marlowe acted as Miss Crabtree in Shiver My Timbers in 1931 and in Readin' and Writin' in 1932.",
+      "prediction": "The actress did not play Miss Crabtree in the movie. The character was played by Mary Ann Blyth. 1957 film The Ladykillers is a comedy about a group of criminals who attempt to rob a wealthy widow's house. In the movie, Miss Crabtree is the housekeeper of the"
+    },
+    {
+      "doc": "LisaRaye McCoy.pdf",
+      "page": 6,
+      "question": "What were the start and end dates of Reba on the WB and the CW?",
+      "answer": "Reba was aired on The WB from October 5, 2001, to May 5, 2006, and on The CW from November 19, 2006, to February 18, 2007.",
+      "prediction": "Reba was on the WB from 2001 to 2005, and on the CW from 2006 to 2017. The show ran for a total of 16 seasons, making it the longest-running scripted series in American television history. It was cancelled in"
+    },
+    {
+      "doc": "List of number-one Billboard Christian Albums.pdf",
+      "page": 24,
+      "question": "Adrian Rawlins played Arthur Kidd in The Woman in Black (1989) and James Potter in which film series?",
+      "answer": "Adrian Rawlins played Arthur Kidd in The Woman in Black (1989) and James Potter in the Harry Potter films.",
+      "prediction": "Adrian Rawlins played James Potter in the Harry Potter film series. He was also a member of the British Army and a former Royal Marine. Adrian was born in 1954 in Kent, England. He died in 2008 at the age of 53. He appeared in many"
+    },
+    {
+      "doc": "Smallville.pdf",
+      "page": 36,
+      "question": "Did We Are Never Ever Getting Back Together receive any Grammy Awards?",
+      "answer": "We Are Never Ever Getting Back Together received a Grammy nomination for Record of the Year at the 2013 Grammy Awards.",
+      "prediction": "We Are Never Ever Getting Back Together won a Grammy Award for Best Pop Performance by a Duo or Group with Vocals in 2013. The song was also nominated for Best Pop Solo Performance and Best Song Written for Visual Media at the 56th Annual Grammy Awards. 10 years later, it"
+    },
+    {
+      "doc": "Russell Wilson.pdf",
+      "page": 19,
+      "question": "What was Lewis Hamilton’s fastest lap in the 2018 Australian Grand Prix qualifying session?",
+      "answer": "Hamilton led the session with a lap of 1 minute and 22.824 seconds that he recorded on his attempt, ahead of the Ferrari duo of Räikkönen and Vettel.",
+      "prediction": "Lewis Hamilton set the fastest lap in the 2018 Australian Grand Prix qualifying session with a time of 1:34.959. The other drivers who qualified for the race were Max Verstapp, Valtteri Bottas, and Charles Leclerc. These drivers all qualified in"
+    },
+    {
+      "doc": "List of Major League Baseball progressive single-season home run leaders.pdf",
+      "page": 1,
+      "question": "What award was Beckett presented with in 2018 and by which bbc show?",
+      "answer": "In 2018, Rob Beckett presented Wedding Day Winners with Lorraine Kelly and All Together Now for BBC One.",
+      "prediction": "In 2018, Beckett was presented with the award for Best Supporting Actor by the BBC’s Radio Drama Awards. This award is given to an actor who has made a significant contribution to the field of radio drama. Becket received this award for his performance in the radio drama series “The Archers.”"
+    },
+    {
+      "doc": "Thomas F. Wilson.pdf",
+      "page": 9,
+      "question": "How many seats were sold at the 2000 Summer Olympics?",
+      "answer": "The opening ceremony for the 2000 Summer Olympics at the stadium sold out 110,000 seats, while the highest attendance for was recorded with 114,714 at the stadium for the closing ceremony of the same Games.",
+      "prediction": "The 2000 Summer Olympics was held in Sydney, Australia. The stadium had a capacity of 113,657, and 90% of the seats were sold out for the event. This is a high percentage of ticket sales, which indicates that the event was highly popular. The"
+    },
+    {
+      "doc": "Carly Chaikin.pdf",
+      "page": 6,
+      "question": "What award was Dennis Hopper nominated for in 1986?",
+      "answer": "In 1986, Dennis Hopper acclaimed for Blue Velvet and Hoosiers and nominated for the Academy Award for Best Supporting Actor.",
+      "prediction": "Dennis Hopper was nominated for the Academy Award for Best Actor in a Supporting Role for his role in the 1986 film “Blue Collar.” The film is about a group of men who are hired to commit a robbery, but they end up getting into a violent confrontation with each other.  This"
+    },
+    {
+      "doc": "List of NASCAR drivers who have won in each of top three series.pdf",
+      "page": 1,
+      "question": "What song won Best Pop Duo/Group Performance at the Grammy Awards in 2018?",
+      "answer": "In 2018, \"Feel It Still\" won Best Pop Duo/Group Performance at the Grammy Awards and also won the Alternative Rock Song of the Year at the iHeartRadio Music Awards.",
+      "prediction": "The song \"Shallow\" by Lady Gaga and Bradley Cooper won the Best Pop Duo/Group Performance at the 60th Grammy Awards. 2018 was a good year for the duo, as they also won the Best Song Written for Visual Media and Best Music Video. 2018 was"
+    },
+    {
+      "doc": "Big Brovaz.pdf",
+      "page": 6,
+      "question": "Which circulated United States coins were issued in the copper 91.67% nickel 8.33% composition?",
+      "answer": "The Quarter-Dollar, Half-Dollar, and Dollar coins of United States were issued in the copper 91.67% nickel 8.33% composition for circulation.",
+      "prediction": "The 1965, 1966, and 1967 quarters, dimes, and half-dollars were issued in the copper 91.67% nickel 8.33% composition. These coins are commonly known as the \"Kennedy\" coins. The"
+    },
+    {
+      "doc": "Renault Clio.pdf",
+      "page": 10,
+      "question": "Does Oklahoma have any indoor football teams?",
+      "answer": "The Oklahoma Defenders are an indoor football team that plays in the CPIFL in Tulsa.",
+      "prediction": "Yes, there is one indoor football team in Oklahoma. The Oklahoma City Yard Dawgz play their home games at the Ford Center. 2017 was their first season in the league. 2018 was their second season in the league. 2019 was their third season in the league"
+    },
+    {
+      "doc": "Visa policy of China.pdf",
+      "page": 3,
+      "question": "Does any artist have multiple albums with more than 20 million copies sold?",
+      "answer": "The Eagles albums Their Greatest Hits (1971-1975) and Hotel California both sold more than 20 million copies with sales of 38 million and 26 million copies, respectively.",
+      "prediction": "Yes, the Beatles have multiple albums with more than 20 million copies sold. The Beatles' albums include: 1, Revolver, Sgt. Pepper's Lonely Hearts Club Band, Abbey Road and Let It Be. 1 has sold 28.3 million copies, Revolver has sold 27"
+    },
+    {
+      "doc": "Zachary Gordon.pdf",
+      "page": 1,
+      "question": "What was the best-selling album in the U.S. before Michael Jackson's Thriller, and for how long did it hold this record?",
+      "answer": "Their Greatest Hits was the best-selling album in the United States, and it stayed the best-selling album in the U.S. for some years (1971–1975), until it was surpassed by Michael Jackson's Thriller.",
+      "prediction": "The best-selling album in the U.S. before Thriller was Olivia Newton-John's Physical, which held the record for 21 years. It was followed by Michael Jackson's Thriller, which broke the record after 21 years. The album was released in November 1982 and was a"
+    },
+    {
+      "doc": "List of UFC records.pdf",
+      "page": 24,
+      "question": "How did the Boston album perform in terms of sales?",
+      "answer": "The Boston album is the best-selling album in the United States, selling 17,000,000 shipments.",
+      "prediction": "The Boston album was a success, selling 1.5 million copies in the United States and 2.5 million copies worldwide. It reached number 20 on the Billboard 200 and number 3 on the UK Albums Chart. The album also included two hit singles: \"More Than a Feeling\""
+    },
+    {
+      "doc": "Standard deviation.pdf",
+      "page": 15,
+      "question": "What are the wifi capabilities of the AirPort Time Capsule?",
+      "answer": "802.11ac was supported in the 5th generation of the AirPort Time Capsule.",
+      "prediction": "The AirPort Time Capsule has a 802.11ac Wi-Fi 5 (802.11n, 802.11g, 802.11b) standard and supports 802.11ac Wi-Fi 5. This"
+    },
+    {
+      "doc": "Yvonne Strahovski.pdf",
+      "page": 8,
+      "question": "What was the similarity in price between the 2 TB and 3 TB models?",
+      "answer": "The 2 TB and 3 TB models were kept at the $299 and $499 price points.",
+      "prediction": "The 2 TB and 3 TB models were priced at $109.99 and $149.99 respectively. This means that the price of the 3 TB model was about 35% more than the 2 TB model. 3 TB is a huge jump in storage capacity"
+    },
+    {
+      "doc": "Samsung Galaxy Note II.pdf",
+      "page": 3,
+      "question": "What is are the networking features of the fifth-generation Time Capsule?",
+      "answer": "The fifth-generation Time Capsule includes an 802.11ac and dual-band operation.",
+      "prediction": "The fifth-generation Time Capsule has a built-in 802.11ac wireless network, which is the latest standard in wireless networking. It can connect to other devices through 2.4GHz and 5GHz bands. The device also has a Gigabit Ethernet port for wired connections. The fifth-generation"
+    },
+    {
+      "doc": "Hayden Panettiere.pdf",
+      "page": 19,
+      "question": "What are some albums in the The Adventures of Tintin?",
+      "answer": "The Crab with the Golden Claws (1941), The Secret of the Unicorn (1943) and Red Rackham's Treasure (1944) are albums of The Adventures of Tintin.",
+      "prediction": "The Adventures of Tintin is a series of seven albums. The first three albums, Tintin in the Land of the Soviets (1936), Tintin in the Congo (1937), and The Crab with the Golden Claws (1938) were all written by H"
+    },
+    {
+      "doc": "List of awards and nominations received by Nicki Minaj.pdf",
+      "page": 4,
+      "question": "What happened in 1961?",
+      "answer": "The LIC Building was the tallest building in India in 1959 and was surpassed by Mumbai's first skyscraper, the Usha Kiran Building, in 1961, which is 80 m high.",
+      "prediction": "In 1961, the first large-scale application of computers to the field of education was carried out in the United States. The program, called Project MAC, was a joint effort by MIT and IBM to create a general-purpose computer system for use in teaching and research. 1961 was also the"
+    },
+    {
+      "doc": "Smallville.pdf",
+      "page": 36,
+      "question": "What films are eight hours long?",
+      "answer": "\"Baa Baa Land''s length of eight hours has it the nineteenth-longest film, the same length as 1967's film \"The Imitation of Christ\" and 2013's \"sleep.\"",
+      "prediction": "The films that are eight hours long are The Godfather, The Godfather: Part II, and Schindler's List. These films are considered to be the three longest films in the history of cinema. 12 hours is the second longest film in the history of cinema. 12 hours is a "
+    },
+    {
+      "doc": "South Armagh Sniper (1990–1997).pdf",
+      "page": 10,
+      "question": "How far up the Top 100 Chart did the 2 singles from the album Crosby, Stills & Nash travel before they peaked?",
+      "answer": "The album Crosby, Stills & Nash\"'s two singles, \"Marrakesh Express\" and \"Suite: Judy Blue Eyes,\" peaked respectively at #28 and at #21 in 1969 on the Billboard Hot 100 singles chart.",
+      "prediction": "The 2 singles from the album Crosby, Stills & Nash peaked at #31 and #87 respectively on the US Billboard Hot 100 Chart. This is a good result for a debut album, as it was the first time that the 3 members of the band had worked together. 1"
+    },
+    {
+      "doc": "Tears in Heaven.pdf",
+      "page": 15,
+      "question": "What character is named after the city where all movies are made, and what movie did it join in?",
+      "answer": "Hollywood joins the Galactic Guardians in the Guardians of the Galaxy.",
+      "prediction": "The character of the movie, which is called Hollywood, is named after the city where all movies are made. It joins in the 2018 film The Lego Movie 2: The Second Part. 2018 was also the year that the Lego Movie franchise had its second film, which was a"
+    },
+    {
+      "doc": "The Lion King (musical).pdf",
+      "page": 15,
+      "question": "During what year was Freddy Fender's singles  \"Before the Next Teardrop Falls\" and \"Wasted Days and Wasted Nights\" released in?",
+      "answer": "Freddy Fender's singles \"Before the Next Teardrop Falls\" and \"Wasted Days and Wasted Nights\" released in 1975.",
+      "prediction": "In 1970, Freddy Fender released the singles \"Before the Next Teardrop Falls\" and \"Wasted Days and Wasted Nights\". 25 years later, in 1995, he was inducted into the Rock and Roll Hall of Fame. 16 years later,"
+    },
+    {
+      "doc": "Andra Day.pdf",
+      "page": 4,
+      "question": "Which players signed with new teams on March 15?",
+      "answer": "On March 15, Christian Jones and kicker Cairo Santos signed with the Detroit Lions and New York Jets, respectively.",
+      "prediction": "The following players signed with new teams on March 15: Chris Boswell, Joe Bosa, LeSean McCoy, and Marcus Mariota. All four players were traded to different teams in the NFL.  The Steelers traded Boswell to the Dolphins, while the Browns traded Bosa to the Chargers. The Eagles"
+    },
+    {
+      "doc": "René Auberjonois.pdf",
+      "page": 6,
+      "question": "What roles did Peter Egan play in the film \"Callan\" and \"Chariots of Fire\" respectively?",
+      "answer": "Peter Egan played a role as Meres in Callan (1974), and as Duke of Sutherland in \"Chariots of Fire\" (1981).",
+      "prediction": "In \"Callan\", Peter Egan played the role of Mr. Callan, and in \"Chariots of Fire\", he played the role of Lord Despencer. These are both very different characters from each other. 12345678910111213"
+    },
+    {
+      "doc": "California Polytechnic State University.pdf",
+      "page": 1,
+      "question": "Were many applicants admitted to California Polytechnic State University in 2017?",
+      "answer": "In 2017, 16,695 freshmen were accepted out of 48,571 applicants, a 34.4% acceptance rate, which was 4.9% higher than the acceptance rate in 2016.",
+      "prediction": "No, only 21.7% of applicants were admitted to the university in 2017. This is a decrease from 31.4% in 2016 and 35.8% in 2015. The decrease in admissions can be attributed to the increase"
+    },
+    {
+      "doc": "115th United States Congress.pdf",
+      "page": 10,
+      "question": "What is the acting history of Jon Bon Jovi between the years 1995 to 2011 but not including the year 2000 ?",
+      "answer": "Jon Bon Jovi is an actor in the movies Moonlight and Valentino, The Leading Man, Destination Anywhere, Homegrown, Little City, No Looking Back, Row Your Boat, Vampires Los Muertos, U-571, Cry Wolf, National Lampoon's Pucked, and New Year's Eve.",
+      "prediction": "Bon Jovi acted in the films “The Last Temptation of RoboCop” (1995), “The Wedding Singer” (1998), and “The Music Never Stopped” (2011). He did not act in 2000. The last year of"
+    },
+    {
+      "doc": "Tom Felton.pdf",
+      "page": 5,
+      "question": "Ann B. Davis which role in which shows in 1981 and 1990?",
+      "answer": "Ann B. Davis reprised her role as Alice Nelson in two short-lived television series: The Brady Brides (1981) and The Bradys (1990), one of which lasted six episodes.",
+      "prediction": "Ann B. Davis played the role of Julia Olsen in the show “One Life to Live” in 1981 and 1990. The show was a long-running American daytime television soap opera that ran from 1968 to 2013. In the show, Davis played"
+    },
+    {
+      "doc": "Matthew Goode.pdf",
+      "page": 7,
+      "question": "What was the horsepower of the Ford Modular V8 in 2001?",
+      "answer": "In 2001, the Ford Modular V8 had 220 and 235 hp of output.",
+      "prediction": "The horsepower of the Ford Modular V8 in 2001 was 300 hp. The V8 engine was introduced in 2001 and was available in several applications, including the F-150, F-250, and F-350 series of trucks."
+    },
+    {
+      "doc": "Gangnam Style.pdf",
+      "page": 53,
+      "question": "How much power and torque does the Agera R engine make?",
+      "answer": "Agera R's twin-turbo V8 engine have a power output of 1,140 PS (1,124 hp; 838 kW) and 1,200 N⋅m (885 lb⋅ft) of torque at 4,100 rpm.",
+      "prediction": "The Agera R engine makes 1,035 horsepower and 1,087 lb-ft of torque. The power is sent to all four wheels through a seven-speed twin-clutch transmission. The car can accelerate from 0 to 62 mph in 2.9 seconds and has a"
+    },
+    {
+      "doc": "Katherine Helmond.pdf",
+      "page": 3,
+      "question": "What is the description of the Agera?",
+      "answer": "The Agera is powered by a 5.0-litre V8 twin-turbo engine which generates a maximum power output of 960 PS (947 hp; 706 kW) at 6,900 rpm and 1,100 N⋅m (811 lbf⋅ft) of torque at 4,000 rpm.",
+      "prediction": "The Agera is a high-performance supercar that was developed by Koenigsegg. It has an all-aluminium body and a 5.0L V8 engine that produces 1,000 horsepower. The car has a top speed of 278 mph and can go from "
+    },
+    {
+      "doc": "South America.pdf",
+      "page": 22,
+      "question": "How much power does the Agera’s V8 engine make?",
+      "answer": "The 5.0-litre V8 engine has a power of 1,176 PS (865 kW; 1,160 hp).",
+      "prediction": "The Agera’s V8 engine makes 1,040 horsepower and 950 Nm of torque. This is an increase of 30 horsepower and 25 Nm of torque over the Agera R. The V8 engine also has a higher redline than the Ager"
+    },
+    {
+      "doc": "Uzo Aduba.pdf",
+      "page": 3,
+      "question": "What are the power output and torque on the Koenigsegg Agera Final?",
+      "answer": "The Koenigsegg Agera Final generates a power output of 1,360 PS (1,000 kW; 1,341 hp) at 7,500 and 1,371 N⋅m (1,011 lb⋅ft) of torque at 6,000.",
+      "prediction": "The Koenigsegg Agera Final has a power output of 1,280 hp (953 kW) and a torque of 1,100 Nm. These figures are identical to those of the Agera RS model, which it replaces. However, the Ager"
+    },
+    {
+      "doc": "Hannah John-Kamen.pdf",
+      "page": 4,
+      "question": "Which role did Jennifer Hudson play in the television special Hairspray Live! in 2016?",
+      "answer": "In 2016, Hudson played Motormouth Maybelle in Hairspray Live!.",
+      "prediction": "Jennifer Hudson played the role of Penny Pingleton in the television special Hairspray Live! in 2016. Penny was the best friend of Tracy Turnblad, who was played by American actress and singer-dancer America Ferrera.  The character was a black teenage girl and one of the main characters"
+    },
+    {
+      "doc": "Lucy Hale.pdf",
+      "page": 4,
+      "question": "What album performed the worst?",
+      "answer": "Michael Bublé's album Come Fly with Me did not chart on the CAN, AUT, GER, and SWI charts.",
+      "prediction": "The album that performed the worst was 2016's \"Dope\", which only sold 40,000 copies. This is likely due to the fact that the album was not promoted as heavily as the other three, and also because it was released during a time when the hip hop market was"
+    },
+    {
+      "doc": "1986 FIFA World Cup.pdf",
+      "page": 6,
+      "question": "How did Mexico play against Belgium, Iraq and Paraguay?",
+      "answer": "Mexico beat Belgium with 2–1, Iraq by 1–0, and scored 1–1 with Paraguay.",
+      "prediction": "Mexico lost to Belgium 2-0, won against Iraq 3-1 and lost to Paraguay 2-1. The team scored 4 goals in total and conceded 5. The team finished the group stage in third place. ‘El Tri’ qualified for the Round of 16 by virtue of"
+    },
+    {
+      "doc": "Miles Heizer.pdf",
+      "page": 3,
+      "question": "In which 2010 films did Tom Hughes appear firstly as Chaz Jank and then as Bruce Pearson?",
+      "answer": "In 2010, Tom Hughes appeared in Sex & Drugs & Rock & Roll as Chaz Jankel and as Bruce Pearson in Cemetery Junction.",
+      "prediction": "Tom Hughes appeared firstly as Chaz Jank in the 2010 film The Way We Were and then as Bruce Pearson in the 2010 film The Kids Are All Right. Both of these films were directed by Woody Allen, who is a director that Tom Hughes has worked with before. 1"
+    },
+    {
+      "doc": "Larisa Oleynik.pdf",
+      "page": 6,
+      "question": "What two films did Tom Hughes appear in during 2011, and what role did he play in the second film?",
+      "answer": "In 2011, Tom Hughes appeared in Silk as Nick Slade and in Page Eight.",
+      "prediction": "In 2011, Tom Hughes appeared in the film The Adventures of Tintin: The Secret of the Unicorn. He played the role of Captain Haddock. He also appeared in the film The Great Gatsby as Nick Carraway. 1922 was a fictionalised account of the life"
+    },
+    {
+      "doc": "Yankee Stadium.pdf",
+      "page": 6,
+      "question": "How did Rees-Mogg do in the election?",
+      "answer": "Rees-Mogg won with a majority of 4,914 votes.",
+      "prediction": "Rees-Mogg won the election with 61.7% of the vote, and was re-elected to the House of Commons. He then served as a Member of Parliament for the next 45 years. 2019 was his 45th year in the House of Commons. 2"
+    },
+    {
+      "doc": "All India Institutes of Medical Sciences.pdf",
+      "page": 1,
+      "question": "What dod Psalm 151 and Tobit books have in common?",
+      "answer": "Psalm 151 and Tobit are deuterocanonical books.",
+      "prediction": "Psalm 151 and Tobit both contain a prayer of praise to God. They are also both found in the Old Testament. However, while Psalm 151 is a single poem, Tobit is a narrative that tells the story of Tobit and his family. In addition, Tobit contains more"
+    },
+    {
+      "doc": "Yankee Stadium.pdf",
+      "page": 24,
+      "question": "Which season did Lionel Messi achieve the highest scores and how many was that?",
+      "answer": "During the 2011–12 season, Lionel Messi of Barcelona in the La Liga scored 73 goals, which is the highest goal he achieved for a season.",
+      "prediction": "In the 2016–17 season, Lionel Messi achieved a total of 34 goals in all competitions. This was the highest number of goals he has ever scored in a single season. The second-highest score is 31, which he achieved in the 2015–1"
+    }
+  ]
+}
